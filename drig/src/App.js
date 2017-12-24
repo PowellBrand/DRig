@@ -8,17 +8,19 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <nav>
-          <div>David</div>
+        <header className = "mainHead">
+        <nav className = "mainNav">
+          <div className = "DR">David Rigtrup</div>
           <div>
-            <Link to='/'>Home</Link>
-            <Link to='/about'>About</Link>
-            <Link to='/blog'>Blog</Link>
-            <Link to='/books'>Books</Link>
-            <Link to='/contact'>Contact</Link>
+            <Link to='/contact'><p className = "navbtn">Contact</p></Link>
+            <Link to='/books'><p className = "navbtn">Books</p></Link>
+            <Link to='/blog'><p className = "navbtn">Blog</p></Link>
+            <Link to='/about'><p className = "navbtn">About</p></Link>
+            <Link to='/'><p className = "navbtn">Home</p></Link>
           </div>
         </nav>
         {routes}
+        </header>
       </div>
     );
   }

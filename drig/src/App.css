@@ -1,28 +1,26 @@
-.App {
+.mainHead{
+  background: teal;
+  height: 100px;
+}
+
+.navbtn{
+  width: 100px;
+  height: 50px;
+  margin: 10px 15px 10px 10px;
+  display: inline;
+  float: right;
+  font-size: 30px;
   text-align: center;
+  position: relative;
+  top: -30px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.DR{
+  font-family: 'Permanent Marker', cursive;
+  color: black;
+  font-size: 50px;
+  width: auto;
+  position: relative;
+  top: 18px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}

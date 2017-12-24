@@ -22,6 +22,9 @@ massive(process.env.CONNECTIONSTRING).then(db => {
 // Create Blog Message
 app.post('/blog/messages', controller.createMes)
 
+//Get Blog Messages
+app.get('/blog/messages', controller.getMessages)
+
 app.listen(process.env.PORT, ()=> {
     console.log(`I'm listening on port: ${process.env.PORT}.`)
 })
