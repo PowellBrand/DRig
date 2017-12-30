@@ -6,7 +6,7 @@ export default class Books extends Component {
 
     render() {
         return (
-            <div>
+            <div className='mainBod'>
                 
             </div>
         )

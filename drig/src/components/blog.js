@@ -6,8 +6,9 @@ export default class Blog extends Component {
 
     render() {
         return (
-            <div>
-              
+            <div className='mainBod'>
+                <div className='blogCont'>
+                </div>
             </div>
         )
     }
