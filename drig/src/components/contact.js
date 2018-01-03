@@ -8,12 +8,7 @@ export default class Contact extends Component {
         return (
             <div className='mainBod'>
                 <div className='container'>
-                    <h1 className='author'>
-                        <span>David</span>Rigtrup
-                    </h1>
-                    <ul>
-                        <li>email address</li>
-                    </ul>
+                   
                     <div className='contact'>
                         <h3>Email Me</h3>
                         <form method="POST" /*action="contact/send"*/>

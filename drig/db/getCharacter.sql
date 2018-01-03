@@ -1,1 +1,1 @@
-select * from character;
+select * from characters;
