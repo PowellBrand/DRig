@@ -9,11 +9,12 @@ export default class Landing extends Component {
             <div className='mainBod'>
                 <div className="socialContainer"> 
                     <div className='recentmsg'>This will display a message from the author</div>      
-                    <div className='socialMed'>
+                    <div className='social-box'>
                         <div className='socialbtn'>YouTube</div>
                         <div className='socialbtn'>Twitter</div>
                         <div className='socialbtn'>FaceBook</div>
-                        <div className='socialbtn'>Other</div>                      
+                        <div className='socialbtn'>Other</div>
+                        <a href={process.env.APP_LOGIN}><button>;)</button></a>                      
                     </div>
                 </div>
                 <div className="bookinfo">

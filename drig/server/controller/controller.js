@@ -1,3 +1,5 @@
+const nodemailer = require('nodemailer');
+
 module.exports ={ 
     
     //Create Blog Message
@@ -30,8 +32,9 @@ module.exports ={
         }).catch(()=> res.status(500).send())
     },
 
-    //Send Email
+    //-----------------Send Email--------------------------//
     sendEmail: (req,res) => {
+        console.log(req.body);
         const output =`
             <p>You have a new email from your website</p>
             <p>${req.body.message}</p>

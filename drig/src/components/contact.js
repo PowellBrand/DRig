@@ -11,7 +11,7 @@ export default class Contact extends Component {
                    
                     <div className='contact'>
                         <h3>Email Me</h3>
-                        <form method="POST" /*action="contact/send"*/>
+                        <form method="POST" action="contact/send">
                             <p>
                                 <label>Name</label>
                                 <input type='text' name="name" />
