@@ -12,6 +12,7 @@ const express = require('express')
 
 const app = express();
 const authController = require('./controller/auth_controller')
+const mailController = require('./controller/mail_controller')
 app.use(bodyParser.json());
 //bodyParser middleware from bodyparser github repo
 var jsonParser = bodyParser.json()
@@ -96,8 +97,8 @@ app.get('/books/characters', controller.getCharacters)
 app.get('/books/worldinfo', controller.getWorldInfo)
 
 //Send Email
-app.post('/contact/send', controller.sendEmail)
+app.post('/contact/send', mailController.sendEmail)
 
-app.listen(process.env.PORT, ()=> {
-    console.log(`I'm listening on port: ${process.env.PORT}.`)
+app.listen(process.env.SERVER_PORT, ()=> {
+    console.log(`I'm listening on port: ${process.env.SERVER_PORT}.`)
 })

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import coverPic from './coverPic.jpg';
 
 
 export default class Landing extends Component {
@@ -19,6 +20,7 @@ export default class Landing extends Component {
                 </div>
                 <div className="bookinfo">
                     <div className='coverPic'>
+                        <img src = {coverPic}/> 
                         
                     </div>
                     <div className='bookDesc'>

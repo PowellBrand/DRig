@@ -1,0 +1,16 @@
+.mainBod{
+    background: lightgray;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+  }
+
+.blogCont{
+    width: 900px;
+    height: 100vh;
+    margin: 0px, 100px;
+    background: white;
+    position: absolute;
+    left: 250px;
+  }

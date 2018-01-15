@@ -1,15 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Audiowide|Nixie+One");
-.mainHead{
-  background: #383535;
-  height: 100px;
-}
 
-/* .mainFoot{
-  background: teal;
-  height: 15px;
-} */
-
-/* home css */
+/* Main body */
 .mainBod{
   background: lightgray;
   width: 100%;
@@ -17,61 +8,31 @@
   display: flex;
   flex-direction: row;
 }
-/* Social Side */
-.socialContainer{
-  order: 1;
-  background: white;
-  width: 50%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-}
-.recentmsg{
-  order: 1;
-  background: lightblue;
-  width: 100px;
-  height: 100px;
-}
-.social-box{
-  order: 2;
-  width: 500px;
-  height: 300px;
-  margin: 15px 15px;
-  background: lightgreen;
-  display: inline;
-}
-.socialbtn{
-  width: 100px;
-  height: 50px;
-  background: lightcoral;
-  margin: 20px;
-}
-
-/* Book Side */
-.bookinfo{
-  order: 2;
-  background: green;
-  width: 50%;
-  height: auto;
-  display: flex;
-}
-
-
-/* End Home css */
+/* End Main body */
 
 /* Header css */
+  .mainHead{
+    background: #383535;
+    height: 130px;
+  }
+.mainNav{
+  height: 110px;
+}
+
+
 .navbtn{
   width: 100px;
   height: 50px;
-  margin: 0 15px 10px 10px;
+  margin: 0px 0px 10px 10px;
   display: inline;
   float: right;
-  font-size: 30px;
+  font-size: 28px;
   font-family: 'Nixie One', cursive;
   color: #9e220c;
   text-align: center;
   position: relative;
-  top: -30px;
+  top: -15px;
+  right: 25px;
 }
 
 .DR{
@@ -82,59 +43,45 @@
   position: relative;
   top: 18px;
 }
+
+.ham-menu{
+  width: 30px;
+  height: 30px;
+  background: url("http://21thirteen.com/wp-content/uploads/2016/03/hamburger-menu.jpg");
+  margin-right: 75px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* display: none; */
+}
+
+/* responsive header start */
+
+@media(max-width: 1000px){
+  .navbtn{
+    width: 50px;
+    height: 25px;
+    margin: 0 15px 10px 10px;
+    display: inline;
+    float: right;
+    font-size: 20px;
+    font-family: 'Nixie One', cursive;
+    color: #9e220c;
+    text-align: center;
+    position: relative;
+    top: -15px;
+  }
+}
+
+@media(max-width: 780px){
+  .navbtn{
+   display: none;
+  }
+  .ham-menu{
+    display: inline;
+  }
+}
+
 /* End Header css */
 
 
-.blogCont{
-  width: 900px;
-  height: 100vh;
-  margin: 0px, 100px;
-  background: white;
-  position: absolute;
-  left: 250px;
-}
 
-.container{
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1em;
-}
-
-.contact{
-  background: white;
-}
-
-.contact form{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
-}
-.contact form label{
-  display: block;
-}
-
-.contact form p{
-  margin: 0;
-}
-
-.contact form input, .contact form textarea{
-  width: 95%;
-  padding: 1em;
-  border: 2px solid black;
-}
-
-.contact form button{
-  width: 150px;
-  height: 75px;
-  background: rgb(133, 46, 46);
-  border: 0;
-  position: relative;
-  top: 30px;
-}
-.contact form button:hover, .contact form button:focus{
-  background: rgb(10, 1, 1);
-  color: red;
-  outline: 0;
-  transition: background-color 1s ease-out;
-}
