@@ -9,6 +9,7 @@ import './components/books/books.css'
 import './components/blog/blog.css'
 import './components/about/about.css'
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -38,9 +39,7 @@ class App extends Component {
               <Link to='/about'><p className="navbtn">About</p></Link>
               <Link to='/'><p className="navbtn">Home</p></Link>
             </div>
-            <div
-              onClick={this.slide}
-              className='ham-menu'>
+            <div onClick={this.slide} className='ham-menu'>
             </div>
           </nav>
           {routes}

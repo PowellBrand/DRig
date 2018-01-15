@@ -1,4 +1,5 @@
 const passport = require('passport');
+const axios = require('axios');
 
 module.exports = {
   setUser: ( req, res, next ) => {
@@ -16,8 +17,14 @@ module.exports = {
     }
   },
 
-  logout: ( req, res, next ) => {
-    req.session.destroy();
-    res.status(200).send();
+  logout: (req, res) => {
+    req.logOut();
+    axios.get('/v2/logout/returnTo=LOGOUT_URL')
+    res.redirect('http://localhost:3000')
   }
+
+  // logout: ( req, res, next ) => {
+  //   req.session.destroy();
+  //   res.status(200).send();
+  // }
 };

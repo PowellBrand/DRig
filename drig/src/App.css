@@ -51,7 +51,9 @@
   margin-right: 75px;
   background-repeat: no-repeat;
   background-size: cover;
-  /* display: none; */
+  flex-direction: row;
+  justify-content: flex-end;
+  opacity: 0;
 }
 
 /* responsive header start */
@@ -72,12 +74,12 @@
   }
 }
 
-@media(max-width: 780px){
+@media(max-width: 795px){
   .navbtn{
    display: none;
   }
   .ham-menu{
-    display: inline;
+    opacity: 1;
   }
 }
 
