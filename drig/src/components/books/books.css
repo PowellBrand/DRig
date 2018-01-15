@@ -1,5 +1,17 @@
-.mainBod{
-    background: url('./Noc_Art.jpg');
+.bookCont{
+    background-image: url('./Noc_Art.jpg');
     background-repeat: no-repeat;
     background-size: auto; 
+}
+
+.buyLinkBook{
+    height: 100px;
+}
+.buybtn{
+    width: 400px;
+    height: 50px;
+    font-size: 40px;
+    background: rgb(134, 21, 21);
+    position: relative;
+    left: 400px;
 }

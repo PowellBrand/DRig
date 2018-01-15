@@ -43,7 +43,6 @@ passport.use(new Auth0Strategy({
     callbackURL: process.env.CALLBACK_URL,
     scope: 'openid profile'
 }, function(accessToken, refreshToken, extraParams, profile, done){
-
     const db = app.get('db');
 
     db.users.find_user([profile.id]).then((profile)=> {
@@ -52,7 +51,8 @@ passport.use(new Auth0Strategy({
             db.users.add_user([
                 profile.id,
                 profile.name.givenName,
-                profile.name.familyName
+                profile.name.familyName,
+                profile.admin
             ]).then(user => {
                 return done(null, user[0].id)
             })
@@ -80,8 +80,8 @@ passport.deserializeUser((profile, done)=> {
 //Auth endpoints
 app.get('/auth/login', passport.authenticate('auth0'))
 app.get('/auth/callback', passport.authenticate('auth0', {
-    successRedirect: '/',
-    failureRedirect: '/'
+    successRedirect: 'http://localhost:3000/#/',
+    failureRedirect: 'http://localhost:3000/#/'
 }))
 
 // Create Blog Message

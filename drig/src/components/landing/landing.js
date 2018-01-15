@@ -15,7 +15,7 @@ export default class Landing extends Component {
                         <div className='socialbtn'>Twitter</div>
                         <div className='socialbtn'>FaceBook</div>
                         <div className='socialbtn'>Other</div>
-                        <a href={process.env.APP_LOGIN}><button>;)</button></a>                      
+                        <a className="secLogin" href="http://localhost:4000/auth/login"><button>;)</button></a>                      
                     </div>
                 </div>
                 <div className="bookinfo">
@@ -26,7 +26,7 @@ export default class Landing extends Component {
                     <div className='bookDesc'>
                         <p>This is a small description of the book</p>
                     </div>
-                    <a className='buyLink' href="https://www.amazon.com/Nocturnal-Spirits-1-David-Rigtrup/dp/1975807790/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr="><button className='buybtn'>BUY A COPY TODAY!</button></a><br/>
+                    <a className='buyLinkLanding' href="https://www.amazon.com/Nocturnal-Spirits-1-David-Rigtrup/dp/1975807790/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr="><button className='buybtnLand'>BUY A COPY TODAY!</button></a><br/>
                     
                 </div>
 
