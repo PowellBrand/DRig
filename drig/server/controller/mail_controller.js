@@ -21,8 +21,8 @@ module.exports = {
 
         // setup email data with unicode symbols
         let mailOptions = {
-            from: '"Nocturnal Mailer" <brandoTestMail@gmail.com>', // sender address
-            to: 'brandoTestMail@gmail.com', // list of receivers
+            from: '"Nocturnal Mailer"', // sender address
+            to: process.env.EMAIL_USER, // list of receivers
             subject: 'Message from Nocturnal', // Subject line
             html: output // html body
         };
