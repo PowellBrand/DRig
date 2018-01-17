@@ -19,6 +19,7 @@ export default class Contact extends Component {
             subject: 'Email from your site',
             message: this.refs.message.value
         })
+        alert("Email sent");
 
     }
 
@@ -40,7 +41,7 @@ export default class Contact extends Component {
                             </p>
                             <p>
                                 <label>Message</label>
-                                <textarea ref="message" rows="7"></textarea>
+                                <textarea  ref="message" rows="7"></textarea>
                             </p>
                             <button type="submit">Submit</button>
 

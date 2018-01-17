@@ -1,16 +1,24 @@
 .mainBod{
-    background: lightgray;
+    background: linear-gradient(to bottom right, gray,rgb(134, 21, 21));
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    padding: 0px, 500px;
   }
-
+ 
 .blogCont{
-    width: 900px;
+    width: 80%;
     height: 100vh;
     margin: 0px, 100px;
     background: white;
-    position: absolute;
-    left: 250px;
+    justify-content: center;
+  }
+  .blogTitle{
+    font-size: 30px;
+  }
+  .blogAuthor{
+    font-size: 13px;
+    font-style: italic;
   }

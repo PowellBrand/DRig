@@ -3,16 +3,19 @@ import { Link } from 'react-router-dom';
 import profilePic from './David_Pic.jpg';
 
 
-export default class About extends Component {
 
-    render() {
-        return (
-            <div className='mainBod'>
-                <div className="profilePic">
-                    <img src={profilePic}/>
-                </div>
 
+function About() {
+    return (
+        <div className='mainBodAbout'>
+            <div className='profilePicBox'>
+                <div className="profilePic"></div>
             </div>
-        )
-    }
+            <div className='aboutParaBox'>
+                <p className='aboutPara'>David Rigtrup has an unstoppable passion for storytelling built upon deep worlds, intense action, and unique characters. His time in college was spent exclusively on turning that passion into strong writing with an emphasis on visual descriptions and interesting dialog</p>
+            </div>
+        </div>
+    )
 }
+export default About
+

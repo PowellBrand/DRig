@@ -1,1 +1,2 @@
-select * from blogmessage;
+select * from blogmessage
+order by id desc;

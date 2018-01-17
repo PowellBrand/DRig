@@ -3,7 +3,6 @@ const express = require('express')
     , bodyParser = require('body-parser')
     , nodemailer = require('nodemailer')
     , cors = require('cors')
-    , controller = require('./controller/controller')
     , dotenv = require('dotenv').config()
     , session = require('express-session')
     , passport = require('passport')
@@ -12,12 +11,16 @@ const express = require('express')
 
 
 const app = express();
+//Bring in the controllers
 const authController = require('./controller/auth_controller')
 const mailController = require('./controller/mail_controller')
-app.use(bodyParser.json());
+const blogController = require('./controller/blog_controller')
+const charWorldController = require('./controller/char_world_controller');
+
 //bodyParser middleware from bodyparser github repo
+app.use(bodyParser.json());
 var jsonParser = bodyParser.json()
-// var urlencodedParser = bodyParser.urlencoded({ extended: false })
+
 //--------------------END-------------------------//
 app.use(cors());
 
@@ -48,8 +51,7 @@ passport.use(new Auth0Strategy({
 
     let { displayName, user_id, email } = profile
     db.find_user([user_id]).then((users) => {
-        console.log(profile)
-        console.log(users)
+       
 
         if (!users[0]) {
             db.create_user([
@@ -104,16 +106,28 @@ app.get('/auth/me', (req, res) => {
 app.get('/auth/logout', authController.logout)
 
 // Create Blog Message
-app.post('/blog/messages', controller.createMes)
+app.post('/blog/post', blogController.createMes)
 
 //Get Blog Messages
-app.get('/blog/messages', controller.getMessages)
+app.get('/blog/messages', blogController.getMes)
+
+//Delete Blog Message
+app.delete('/blog/delete/:id', blogController.deleteMes)
+
+//Edit Blog Message
+app.put('/blog/messages/:id', blogController.editMes)
+
+//Create Character Bio
+app.post('/books/character/post', charWorldController.createChar)
 
 //Get Character Info
-app.get('/books/characters', controller.getCharacters)
+app.get('/books/characters', charWorldController.getCharBio)
+
+//Create World Info
+app.post('/books/worldinfo/post', charWorldController.createWorld)
 
 //Get World Info
-app.get('/books/worldinfo', controller.getWorldInfo)
+app.get('/books/worldinfo', charWorldController.getWorldInfo)
 
 //Send Email
 app.post('/contact/send', mailController.sendEmail)

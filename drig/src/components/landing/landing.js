@@ -8,8 +8,8 @@ export default class Landing extends Component {
 
     constructor(props) {
         super(props)
-        //Test admin functions
         this.state = {
+            //Test admin functions
             isAdmin: false
         }
 
@@ -26,9 +26,9 @@ export default class Landing extends Component {
                 <div className="socialContainer">
                     <div className='recentmsg'>This will display a message from the author</div>
                     <div className='social-box'>
-                        <div className='socialbtn'>YouTube</div>
-                        <div className='socialbtn'>Twitter</div>
-                        <div className='socialbtn'>FaceBook</div>
+                        <a className='ytb' href="https://www.youtube.com/user/Davrilor"><div className='socialbtn'>YouTube</div></a>
+                        <a className='twttr' href ="https://twitter.com/davrilor"><div className='socialbtn'>Twitter</div></a>
+                        <a className='fcbk' href ="https://www.facebook.com/david.rigtrup.5"><div className='socialbtn'>FaceBook</div></a>
                         <div className='socialbtn'>Other</div>
                         {adminDisplay}
                         <a className="secLogin" href="http://localhost:4000/auth/login"><button>;)</button></a>

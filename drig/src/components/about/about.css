@@ -1,4 +1,40 @@
-.profilePic{
-    width: 400px;
-    height: 500px;
+.mainBodAbout{
+    background: linear-gradient(to bottom right, gray,rgb(134, 21, 21));
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+}
+.aboutCont{
+    order: 1;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+}
+
+.profilePicBox{
+    order: 1;
+    background-image: url('./ProPic1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 100px;
+    margin-top: 50px;
+    width: 500px;
+    height: 430px;
+}
+
+.aboutParaBox{
+    order: 1;
+    width: 50%;
+    margin-right: 100px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+}
+.aboutPara{
+    position: relative;
+    top: 185px;
 }
