@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import nocArt from './Noc_Art.jpg';
+// import nocArt from './Noc_Art.jpg';
 import axios from 'axios';
 
 

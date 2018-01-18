@@ -16,6 +16,14 @@ module.exports = {
         console.log(e)
         res.status(500).send()})
 },
+
+    //Get Landing message
+    getLand: (req, res) => {
+        const db = req.app.get('db');
+        db.getLastMes().then((result)=> {
+            res.status(200).send(result)
+        }).catch((e) => console.log(e).res.status(500).send())
+    },
    
     //Edit post
     editMes: (req, res) => {

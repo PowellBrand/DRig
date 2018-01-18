@@ -184,7 +184,7 @@ export default class CharCreator extends Component {
     }
     handleClick(e) {
         e.preventDefault()
-        axios.post('/blog/post', {
+        axios.post('/books/character/post', {
             name: this.state.name,
             full_name: this.state.full_name,
             species: this.state.species,

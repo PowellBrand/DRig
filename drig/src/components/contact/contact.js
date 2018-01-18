@@ -20,6 +20,11 @@ export default class Contact extends Component {
             message: this.refs.message.value
         })
         alert("Email sent");
+        this.setState({
+            name: '',
+            from: '',
+            message:''
+        })
 
     }
 

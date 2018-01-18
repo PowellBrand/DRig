@@ -111,6 +111,9 @@ app.post('/blog/post', blogController.createMes)
 //Get Blog Messages
 app.get('/blog/messages', blogController.getMes)
 
+//Get Landing message
+app.get('/landing/message', blogController.getLand)
+
 //Delete Blog Message
 app.delete('/blog/delete/:id', blogController.deleteMes)
 

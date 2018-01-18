@@ -9,7 +9,7 @@
 /* Social Side */
 .socialContainer{
   order: 1;
-  background: white;
+  /* background: white; */
   width: 50%;
   height: auto;
   display: flex;
@@ -26,23 +26,60 @@
   width: 500px;
   height: 300px;
   margin: 15px 15px;
-  background: lightgreen;
-  display: inline;
+  /* background: lightgreen; */
+  display: flex;
+  flex-wrap: wrap;
+  
 }
+.ytb{
+  background: url('https://image.flaticon.com/icons/png/512/12/12178.png');
+  background-size: cover; 
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  display: inline-block;
+}
+.twttr{
+  background: url('https://www.shareicon.net/data/512x512/2015/09/09/98251_logo_512x512.png');
+  background-size: cover; 
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  display: inline-block;
+}
+.fcbk{
+  background: url('http://simpleicon.com/wp-content/uploads/facebook-3.svg');
+  background-size: cover; 
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  display: inline-block;
+}
+.nstgrm{
+  background: url('https://image.flaticon.com/icons/svg/61/61164.svg');
+  background-size: cover; 
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  display: inline-block;
+}
+
 .socialbtn{
-  width: 100px;
-  height: 50px;
-  background: lightcoral;
-  margin: 20px;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  margin: 35px;
 }
 
 /* Book Side */
 .bookinfo{
   order: 2;
-  background: green;
-  width: 50%;
+  /* background: green; */
+  width: 80%;
   height: auto;
   display: flex;
+  flex-direction: row;
+  margin-left: 15px;
 }
 .testDiv{
   width: 100px;
