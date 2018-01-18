@@ -118,7 +118,7 @@ app.get('/landing/message', blogController.getLand)
 app.delete('/blog/delete/:id', blogController.deleteMes)
 
 //Edit Blog Message
-app.put('/blog/messages/:id', blogController.editMes)
+app.put('/blog/editPost/:id', blogController.editMes)
 
 //Create Character Bio
 app.post('/books/character/post', charWorldController.createChar)

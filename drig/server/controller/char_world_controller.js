@@ -1,18 +1,24 @@
 module.exports = {
     createChar: (req, res) => {
+        
         const db = req.app.get('db');
-        const { name, fullName, species, sex, height, weight, skinColor, hairColor, features, dob, placeOfBirth, locID, dateOfOrd, placeOfOrd,idNum, echelon, occupation, background } = req.body
-        db.createMes(name, fullName, species, sex, height, weight, skinColor, hairColor, features, dob, placeOfBirth, locID, dateOfOrd, placeOfOrd,idNum, echelon, occupation, background).then(() => {
-            res.status(200).send()
-        }).catch(() => res.status(500).send())
+        const { name, full_name, species, sex, height, weight, skin_color, hair_color, eye_color, features, date_of_birth, place_of_birth, locid,
+            date_of_ordination, place_of_ordination, identification_number, echelon, occupation, background } = req.body
+            
+        db.createChar([name, full_name, species, sex, height, +weight, skin_color, hair_color, eye_color, features, date_of_birth, place_of_birth, locid,
+            date_of_ordination, place_of_ordination, identification_number, echelon, occupation, background]).then((result) => {
+                
+                res.status(200).send()
+            }).catch(() => res.status(500).send())
     },
     getCharBio: (req, res) => {
         const db = req.app.get('db');
-        db.getCharBio().then((result)=> {
+        db.getCharBio().then((result) => {
             res.status(200).send(result)
-        }).catch((e)=> {
+        }).catch((e) => {
             console.log(e)
-            res.status(500).send()})
+            res.status(500).send()
+        })
     },
     createWorld: (req, res) => {
         const db = req.app.get('db');
@@ -23,10 +29,11 @@ module.exports = {
     },
     getWorldInfo: (req, res) => {
         const db = req.app.get('db');
-        db.getWorldInfo().then((result)=> {
+        db.getWorldInfo().then((result) => {
             res.status(200).send(result)
-        }).catch((e)=> {
+        }).catch((e) => {
             console.log(e)
-            res.status(500).send()})
+            res.status(500).send()
+        })
     }
 }

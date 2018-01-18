@@ -27,6 +27,7 @@ export default class CharCreator extends Component {
             occupation: '',
             background: ''
         }
+        this.handleClick = this.handleClick.bind(this);
         this.handleName = this.handleName.bind(this);
         this.handleFName = this.handleFName.bind(this);
         this.handleSpecies = this.handleSpecies.bind(this);

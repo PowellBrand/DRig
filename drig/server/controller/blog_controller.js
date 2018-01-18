@@ -27,22 +27,19 @@ module.exports = {
    
     //Edit post
     editMes: (req, res) => {
-        const {text} = req.body;
+        const {title, date, author, message} = req.body;
         const {params} = req;
         const db = req.app.get('db');
-        console.log(req.body.title)
-    // db.editMes([params.id]).then(()=>{
-        // res.status(200).send(
-        //     newMes[params.id] ={
-        //         title: text,
-        //         date: text,
-        //         author: text,
-        //         message: text
-        //     }
-        // )      
-    // }).catch((e)=> {
-    //     console.log(e)
-    //     res.status(500).send()})
+        // console.log(req.body.title)
+    db.editMes([title, date, author, message, params.id]).then((response)=>{
+        db.getMessages().then((result)=> {
+            res.status(200).send(result)
+        }).catch((e)=> {
+            console.log(e)
+            res.status(500).send()})      
+    }).catch((e)=> {
+        console.log(e)
+        res.status(500).send()})
     },
     //delet post
     deleteMes: (req, res) => {
