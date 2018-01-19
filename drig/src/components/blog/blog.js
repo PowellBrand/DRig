@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+// import EditBlog from './blogEdit';
 
 
 export default class Blog extends Component {
@@ -16,7 +17,7 @@ export default class Blog extends Component {
             isAdmin: false,
             messageid: ''
         }
-        console.log(props)
+        
     }
 
 
@@ -31,9 +32,15 @@ export default class Blog extends Component {
             .catch((error) => {
                 console.log(error)
             });
+        axios.get('/auth/me').then(({ data }) => {
+            this.setState({
+                isAdmin: data
+            })
+
+        }).catch(e => { })
     }
     //Admin Auth check
-    adminCheck(bool){
+    adminCheck(bool) {
         this.setState({
             isAdmin: !this.state.admin
         })
@@ -79,7 +86,7 @@ export default class Blog extends Component {
 
     editPost(id) {
         this.setState({
-            toEdit: !this.state.toEdit, 
+            toEdit: !this.state.toEdit,
             messageid: id
         })
     }
@@ -100,35 +107,39 @@ export default class Blog extends Component {
     }
 
     render() {
+       
         let messages = this.state.messages.map(message =>
             <div key={message.id}>
                 <h1 className='blogTitle'>{message.title}</h1><br />
                 <h3 className='blodDate'>{message.date}</h3><br />
                 <h2 className='blogAuth'>{message.author}</h2><br />
                 <p className='blogMes'>{message.message}</p><br />
-                <button className='delPostBtn' onClick={() => this.deletePost(message.id)} >Delete</button>
-                <button className='editPostBtn' onClick={() => this.editPost(message.id)} >Edit</button>
-                {this.state.toEdit&&this.state.messageid ==message.id ?
+                {this.state.isAdmin?
+                <div><button className='delPostBtn' onClick={() => this.deletePost(message.id)} >Delete</button>
+                    <button className='editPostBtn' onClick={() => this.editPost(message.id)} >Edit</button>
+                </div>
+                : null}
+                {this.state.toEdit && this.state.messageid == message.id ?
                     <p>
                         <label>Title:</label>
                         <input onChange={(e) => this.handleTitle(e.target.value, 'title')} type='text' ref='Title' value={this.state.title} />
                         <label>Date:</label>
                         <input onChange={(e) => this.handleDate(e.target.value, 'date')} type='text' ref='Date' value={this.state.date} />
-
                         <label>Author:</label>
                         <input onChange={(e) => this.handleAuthor(e.target.value, 'author')} type='text' ref='Author' value={this.state.author} />
-
                         <label>Message:</label>
                         <textarea onChange={(e) => this.handleMessage(e.target.value, 'message')} className='msgBox' ref='message' rows="25" cols='50' value={this.state.message} />
                         <button onClick={(e) => this.handleClick(message.id)}>Submit Change</button>
                     </p>
                     : null}
             </div>
+
         )
 
         return (
             <div className='mainBod'>
                 <div className='blogCont'>
+
                     {messages}
                 </div>
             </div>

@@ -51,13 +51,14 @@ passport.use(new Auth0Strategy({
 
     let { displayName, user_id, email } = profile
     db.find_user([user_id]).then((users) => {
-       
-
+       //logged to console for testing//
+        console.log(users)
+        ///////////////////////////////
         if (!users[0]) {
             db.create_user([
                 displayName,
                 email,
-                user_id
+                user_id,
             ]).then(user => {
 
                 return done(null, user[0].id)
@@ -71,18 +72,18 @@ passport.use(new Auth0Strategy({
 //---End Strategy---//
 
 //serialize and deserialize the user
-passport.serializeUser((profile, done) => {
-    return done(null, profile)
+passport.serializeUser((id, done) => {
+    return done(null, id)
 })
-passport.deserializeUser((profile, done) => {
-    return done(null, profile)
-})
-// passport.deserializeUser((id, done) => {
-//     app.get('db').find_session_user([id])
-//         .then((user) => {
-//             return done(null, profile)
-//         })
+// passport.deserializeUser((profile, done) => {
+//     return done(null, profile)
 // })
+passport.deserializeUser((id, done) => {
+    app.get('db').find_session_user([id])
+        .then((user) => {
+            return done(null, user[0])
+        })
+})
 
 
 ///////////////////
@@ -99,7 +100,7 @@ app.get('/auth/me', (req, res) => {
     if (!req.user) {
         res.status(404).send('User not found');
     } else {
-        res.status(200).send(req.user)
+        res.status(200).send(req.user.admin)
     }
 })
 // app.post('/auth/logout', authController.logout);

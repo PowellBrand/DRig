@@ -10,7 +10,8 @@ export default class BlogPost extends Component {
             title: '',
             date: '',
             author: '',
-            message: ''
+            message: '',
+            isAdmin: false
         }
         this.handleClick = this.handleClick.bind(this);
         this.handleTitle = this.handleTitle.bind(this);
@@ -19,7 +20,16 @@ export default class BlogPost extends Component {
         this.handleMessage = this.handleMessage.bind(this);
     }
 
+    componentWillMount(){
+        axios.get('/auth/me').then(({ data }) => {
+            this.setState({
+                isAdmin: data
+            })
+
+        }).catch(e => { })
+    }
     
+
     handleTitle(e) {
         
         this.setState({
@@ -48,6 +58,14 @@ export default class BlogPost extends Component {
            
         })
     }
+    //Admin Auth check
+    adminCheck(bool) {
+        this.setState({
+            isAdmin: !this.state.admin
+        })
+        
+    }
+
     handleClick(e) {
         e.preventDefault()
         axios.post('/blog/post', {
@@ -56,6 +74,7 @@ export default class BlogPost extends Component {
             author: this.state.author,
             message: this.state.message
         })
+        
         alert("Posted");
         
         this.setState({
@@ -69,6 +88,8 @@ export default class BlogPost extends Component {
 
 
     render() {
+
+
         return (
             <div className='mainBod'>
                 <div className='blogCont'>
@@ -89,7 +110,9 @@ export default class BlogPost extends Component {
                             <label>Message:</label>
                             <textarea onChange={(e)=> this.handleMessage(e.target.value, 'message')} className='msgBox' ref='message' rows="50" cols='145' value={this.state.message} />
                         </p>
+                    {this.state.isAdmin?
                         <button type="submit">Submit</button>
+                        : null}
                     </form>
                 </div>
             </div>

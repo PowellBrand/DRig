@@ -19,7 +19,7 @@ module.exports = {
 
   logout: (req, res) => {
     req.logOut();
-    axios.get('/v2/logout/returnTo=LOGOUT_URL')
+    // axios.get('/v2/logout/returnTo=LOGOUT_URL')
     res.redirect('http://localhost:3000')
   }
 
