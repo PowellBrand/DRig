@@ -9,7 +9,8 @@ export default class Books extends Component {
         super(props)
         this.state = {
             charBio: [],
-            worldInfo: []
+            worldInfo: [],
+            isAdmin: false
         }
         console.log(props)
     }
@@ -24,16 +25,34 @@ export default class Books extends Component {
             .catch((e) => {
                 console.log(e)
             });
+        axios.get('auth/me').then(({ data }) => {
+            this.setState({
+                isAdmin: data
+            })
+        })
     }
 
+    adminCheck(bool) {
+        this.setState({
+            isAdmin: !this.state.admin
+        })
+    }
+    deleteChar(id){
+        axios.delete(`/books/delete/${id}`)
+        .then((res)=> {
+            this.setState({
+                charBio: res.data
+            })
+        })
+    }
 
     render() {
         let charBio = this.state.charBio.map(char =>
             <div key={char.id}>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
+                <br />
+                <br />
+                <br />
+                <br />
                 <p>Name: {char.name}</p>
                 <p>Full Name: {char.full_name}</p>
                 <p>Species: {char.species}</p>
@@ -52,7 +71,11 @@ export default class Books extends Component {
                 <p>Echelon: {char.echelon}</p>
                 <p>Occupation: {char.occupation}</p>
                 <p>Background: {char.background}</p>
-                
+                {this.state.isAdmin ?
+                    <div>
+                        <button className='delPostBtn' onClick={() => this.deleteChar(char.id)} >Delete</button>
+                    </div>
+                    : null}
             </div>
         )
         return (

@@ -6,7 +6,7 @@ import axios from 'axios'
 export default class Contact extends Component {
     constructor(props) {
         super(props)
-        this.state ={
+        this.state = {
             name: '',
             from: '',
             message: ''
@@ -23,15 +23,15 @@ export default class Contact extends Component {
             to: 'brandoTestMail@gmail.com',
             subject: 'Email from your site',
             message: this.refs.message.value
+
         })
+       this.refs.name.value = '';
+       this.refs.email.value = '';
+       this.refs.message.value = '';
+
+
         alert("Email sent");
-
-        this.setState({
-            name: '',
-            from: '',
-            message:''
-        })
-
+        
     }
 
     render() {
@@ -41,7 +41,7 @@ export default class Contact extends Component {
 
                     <div className='contact'>
                         <h3>Email Me</h3>
-                        <form onSubmit={this.handleClick}>
+                        <form className='contForm' onSubmit={this.handleClick}>
                             <p>
                                 <label>Name</label>
                                 <input type='text' ref="name" />
@@ -52,7 +52,7 @@ export default class Contact extends Component {
                             </p>
                             <p>
                                 <label>Message</label>
-                                <textarea  ref="message" rows="7"></textarea>
+                                <textarea ref="message" rows="7"></textarea>
                             </p>
                             <button type="submit">Submit</button>
 

@@ -20,6 +20,18 @@ module.exports = {
             res.status(500).send()
         })
     },
+    deleteChar: (req, res) => {
+        const db = req.app.get('db');
+        const {params} = req;
+        db.deleteChar([params.id]).then(()=>{
+            db.getCharBio().then((result)=> {
+                res.status(200).send(result)
+            }).catch((e)=> {
+                console.log(e)
+                res.status(500).send()
+            })
+        })
+    },
     createWorld: (req, res) => {
         const db = req.app.get('db');
         const { name, locID, desc } = req.body

@@ -124,6 +124,9 @@ app.put('/blog/editPost/:id', blogController.editMes)
 //Create Character Bio
 app.post('/books/character/post', charWorldController.createChar)
 
+//Delete Character Bio
+app.delete('/books/delete/:id', charWorldController.deleteChar)
+
 //Get Character Info
 app.get('/books/characters', charWorldController.getCharBio)
 

@@ -25,7 +25,8 @@ export default class CharCreator extends Component {
             identification_number: '',
             echelon: '',
             occupation: '',
-            background: ''
+            background: '',
+            isAdmin: false
         }
         this.handleClick = this.handleClick.bind(this);
         this.handleName = this.handleName.bind(this);
@@ -49,138 +50,146 @@ export default class CharCreator extends Component {
         this.handleBack = this.handleBack.bind(this);
     }
 
-    
+    componentWillMount() {
+        axios.get('/auth/me').then(({ data }) => {
+            this.setState({
+                isAdmin: data
+            })
+
+        }).catch(e => { })
+    }
+
     handleName(e) {
-        
+
         this.setState({
             name: e,
-                     
+
         })
     }
     handleFName(e) {
-        
+
         this.setState({
             full_name: e
-           
+
         })
     }
     handleSpecies(e) {
-        
+
         this.setState({
             species: e
-           
+
         })
     }
     handleSex(e) {
-        
+
         this.setState({
             sex: e
-           
+
         })
     }
     handleHeight(e) {
-        
+
         this.setState({
             height: e
-           
+
         })
     }
     handleWeight(e) {
-        
+
         this.setState({
             weight: e
-           
+
         })
     }
     handleSkin(e) {
-        
+
         this.setState({
             skin_color: e
-           
+
         })
     }
     handleHair(e) {
-        
+
         this.setState({
             hair_color: e
-           
+
         })
     }
     handleEye(e) {
-        
+
         this.setState({
             eye_color: e
-           
+
         })
     }
     handleFeatures(e) {
-        
+
         this.setState({
             features: e
-           
+
         })
     }
     handleDoB(e) {
-        
+
         this.setState({
             date_of_birth: e
-           
+
         })
     }
     handlePoB(e) {
-        
+
         this.setState({
             place_of_birth: e
-           
+
         })
     }
     handleLocId(e) {
-        
+
         this.setState({
             locid: e
-           
+
         })
     }
     handleDoO(e) {
-        
+
         this.setState({
             date_of_ordination: e
-           
+
         })
     }
     handlePoO(e) {
-        
+
         this.setState({
             place_of_ordination: e
-           
+
         })
     }
     handleIdNum(e) {
-        
+
         this.setState({
             identification_number: e
-           
+
         })
     }
     handleEchelon(e) {
-        
+
         this.setState({
             echelon: e
-           
+
         })
     }
     handleOcc(e) {
-        
+
         this.setState({
             occupation: e
-           
+
         })
     }
     handleBack(e) {
-        
+
         this.setState({
             background: e
-           
+
         })
     }
     handleClick(e) {
@@ -207,7 +216,7 @@ export default class CharCreator extends Component {
             background: this.state.background
         })
         alert("Created");
-        
+
         this.setState({
             name: '',
             full_name: '',
@@ -240,81 +249,83 @@ export default class CharCreator extends Component {
                     <form onSubmit={this.handleClick}>
                         <p>
                             <label>Name:</label>
-                            <input onChange={(e)=> this.handleName(e.target.value, 'name')} type='text' ref='name' value={this.state.name} />
+                            <input onChange={(e) => this.handleName(e.target.value, 'name')} type='text' ref='name' value={this.state.name} />
                         </p>
                         <p>
                             <label>Full Name:</label>
-                            <input onChange={(e)=> this.handleFName(e.target.value, 'full_name')} type='text' ref='full_name' value={this.state.full_name} />
+                            <input onChange={(e) => this.handleFName(e.target.value, 'full_name')} type='text' ref='full_name' value={this.state.full_name} />
                         </p>
                         <p>
                             <label>Species:</label>
-                            <input onChange={(e)=> this.handleSpecies(e.target.value, 'species')} type='text' ref='species' value={this.state.species} />
+                            <input onChange={(e) => this.handleSpecies(e.target.value, 'species')} type='text' ref='species' value={this.state.species} />
                         </p>
                         <p>
                             <label>Sex:</label>
-                            <input onChange={(e)=> this.handleSex(e.target.value, 'sex')} type='text' ref='sex' value={this.state.sex} />
+                            <input onChange={(e) => this.handleSex(e.target.value, 'sex')} type='text' ref='sex' value={this.state.sex} />
                         </p>
                         <p>
                             <label>Height:</label>
-                            <input onChange={(e)=> this.handleHeight(e.target.value, 'height')} type='text' ref='height' value={this.state.height} />
+                            <input onChange={(e) => this.handleHeight(e.target.value, 'height')} type='text' ref='height' value={this.state.height} />
                         </p>
                         <p>
                             <label>Weight:</label>
-                            <input onChange={(e)=> this.handleWeight(e.target.value, 'weight')} type='text' ref='weight' value={this.state.weight} />
+                            <input onChange={(e) => this.handleWeight(e.target.value, 'weight')} type='text' ref='weight' value={this.state.weight} />
                         </p>
                         <p>
                             <label>Skin Color:</label>
-                            <input onChange={(e)=> this.handleSkin(e.target.value, 'skin_color')} type='text' ref='skin_color' value={this.state.skin_color} />
+                            <input onChange={(e) => this.handleSkin(e.target.value, 'skin_color')} type='text' ref='skin_color' value={this.state.skin_color} />
                         </p>
                         <p>
                             <label>Hair Color:</label>
-                            <input onChange={(e)=> this.handleHair(e.target.value, 'hair_color')} type='text' ref='hair_color' value={this.state.hair_color} />
+                            <input onChange={(e) => this.handleHair(e.target.value, 'hair_color')} type='text' ref='hair_color' value={this.state.hair_color} />
                         </p>
                         <p>
                             <label>Eye Color:</label>
-                            <input onChange={(e)=> this.handleEye(e.target.value, 'eye_color')} type='text' ref='eye_color' value={this.state.eye_color} />
+                            <input onChange={(e) => this.handleEye(e.target.value, 'eye_color')} type='text' ref='eye_color' value={this.state.eye_color} />
                         </p>
                         <p>
                             <label>Features:</label>
-                            <input onChange={(e)=> this.handleFeatures(e.target.value, 'features')} type='text' ref='features' value={this.state.features} />
+                            <input onChange={(e) => this.handleFeatures(e.target.value, 'features')} type='text' ref='features' value={this.state.features} />
                         </p>
                         <p>
                             <label>DoB:</label>
-                            <input onChange={(e)=> this.handleDoB(e.target.value, 'date_of_birth')} type='text' ref='date_of_birth' value={this.state.date_of_birth} />
+                            <input onChange={(e) => this.handleDoB(e.target.value, 'date_of_birth')} type='text' ref='date_of_birth' value={this.state.date_of_birth} />
                         </p>
                         <p>
                             <label>PoB:</label>
-                            <input onChange={(e)=> this.handlePoB(e.target.value, 'place_of_birth')} type='text' ref='place_of_birth' value={this.state.place_of_birth} />
+                            <input onChange={(e) => this.handlePoB(e.target.value, 'place_of_birth')} type='text' ref='place_of_birth' value={this.state.place_of_birth} />
                         </p>
                         <p>
                             <label>LocId:</label>
-                            <input onChange={(e)=> this.handleLocId(e.target.value, 'locid')} type='text' ref='locid' value={this.state.locid} />
+                            <input onChange={(e) => this.handleLocId(e.target.value, 'locid')} type='text' ref='locid' value={this.state.locid} />
                         </p>
                         <p>
                             <label>DoO:</label>
-                            <input onChange={(e)=> this.handleDoO(e.target.value, 'date_of_ordination')} type='text' ref='date_of_ordination' value={this.state.date_of_ordination} />
+                            <input onChange={(e) => this.handleDoO(e.target.value, 'date_of_ordination')} type='text' ref='date_of_ordination' value={this.state.date_of_ordination} />
                         </p>
                         <p>
                             <label>PoO:</label>
-                            <input onChange={(e)=> this.handlePoO(e.target.value, 'place_of_ordination')} type='text' ref='place_of_ordination' value={this.state.place_of_ordination} />
+                            <input onChange={(e) => this.handlePoO(e.target.value, 'place_of_ordination')} type='text' ref='place_of_ordination' value={this.state.place_of_ordination} />
                         </p>
                         <p>
                             <label>ID#:</label>
-                            <input onChange={(e)=> this.handleIdNum(e.target.value, 'identification_number')} type='text' ref='identification_number' value={this.state.identification_number} />
+                            <input onChange={(e) => this.handleIdNum(e.target.value, 'identification_number')} type='text' ref='identification_number' value={this.state.identification_number} />
                         </p>
                         <p>
                             <label>Echelon:</label>
-                            <input onChange={(e)=> this.handleEchelon(e.target.value, 'echelon')} type='text' ref='echelon' value={this.state.echelon} />
+                            <input onChange={(e) => this.handleEchelon(e.target.value, 'echelon')} type='text' ref='echelon' value={this.state.echelon} />
                         </p>
                         <p>
                             <label>Occupation:</label>
-                            <input onChange={(e)=> this.handleOcc(e.target.value, 'occupation')} type='text' ref='occupation' value={this.state.occupation} />
+                            <input onChange={(e) => this.handleOcc(e.target.value, 'occupation')} type='text' ref='occupation' value={this.state.occupation} />
                         </p>
                         <p>
                             <label>Background:</label>
-                            <textarea onChange={(e)=> this.handleBack(e.target.value, 'background')} className='msgBox' ref='background' rows="20" cols='50' value={this.state.background} />
+                            <textarea onChange={(e) => this.handleBack(e.target.value, 'background')} className='msgBox' ref='background' rows="20" cols='50' value={this.state.background} />
                         </p>
-                        <button type="submit">I am a God!!</button>
+                        {this.state.isAdmin ?
+                            <button type="submit">I am a God!!</button>
+                            : null}
                     </form>
                 </div>
             </div>
