@@ -6,6 +6,11 @@ import axios from 'axios'
 export default class Contact extends Component {
     constructor(props) {
         super(props)
+        this.state ={
+            name: '',
+            from: '',
+            message: ''
+        }
 
         this.handleClick = this.handleClick.bind(this)
     }
@@ -20,6 +25,7 @@ export default class Contact extends Component {
             message: this.refs.message.value
         })
         alert("Email sent");
+
         this.setState({
             name: '',
             from: '',
