@@ -37,6 +37,10 @@
   top: -15px;
   right: 25px;
 }
+.navbtn:hover{
+  color: rgba(25, 25, 184, 0.726);
+  transition: color 1s ease-out;
+}
 
 .DR{
   font-family: 'Audiowide', cursive;
@@ -101,6 +105,14 @@
 @media(max-width: 795px){
   .navbtn{
    display: none;
+  }
+  .DR{
+    font-family: 'Audiowide', cursive;
+    color: #9e220c;
+    font-size: 40px;
+    width: auto;
+    position: relative;
+    top: 18px;
   }
   .mainNav{
     height: 110px;
