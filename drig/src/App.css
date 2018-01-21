@@ -17,6 +17,9 @@
   }
 .mainNav{
   height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 
@@ -51,9 +54,30 @@
   margin-right: 75px;
   background-repeat: no-repeat;
   background-size: cover;
-  flex-direction: row;
-  justify-content: flex-end;
+  flex-direction: column;
+  float: right;
   opacity: 0;
+}
+.menu{
+  width: 200px;
+  height: 200px;
+  margin-top: 54px;
+  background: #383535;
+  position: absolute;
+  right: -200px;
+  top: 55px;
+  transition: .5s;
+  display: none;
+}
+.menubtn{
+  font-family: 'Nixie One', cursive;
+  font-size: 20px;
+  color: #9e220c;
+  margin: 20px;
+  
+}
+.slide {
+  right: 0px;
 }
 
 /* responsive header start */
@@ -78,8 +102,18 @@
   .navbtn{
    display: none;
   }
+  .mainNav{
+    height: 110px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   .ham-menu{
     opacity: 1;
+    margin-top: 34px;
+  }
+  .menu{
+    display: inline;
   }
 }
 
