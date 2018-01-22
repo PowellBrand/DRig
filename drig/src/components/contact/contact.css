@@ -1,5 +1,7 @@
-.mainBod{
-    background: lightgray;
+.mainBodContact{
+    background-image: url('https://wallup.net/wp-content/uploads/2017/11/17/191918-dystopian-1984-camera-748x421.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -10,16 +12,15 @@
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    padding: 1em;
   }
-  
-  .contact{
-    background: white;
+  .email{
+    margin-top: 20px;
+    font-size: 20px;
   }
   
   .contact form{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr;
     grid-gap: 20px;
   }
   .contact form label{
@@ -39,8 +40,10 @@
   .contact form button{
     width: 150px;
     height: 75px;
+    font-size: 25px;
     background: rgb(133, 46, 46);
     border: 0;
+    border-radius: 5px;
     position: relative;
     top: 30px;
   }

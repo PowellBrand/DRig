@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import profilePic from './David_Pic.jpg';
+import React from 'react';
+
 
 
 

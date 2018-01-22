@@ -1,73 +1,102 @@
 @import url("https://fonts.googleapis.com/css?family=Audiowide|Nixie+One");
-.mainBod{
-  background: lightgray;
+.mainLanding{
   width: 100%;
   height: 100vh;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqS__RpIHeu4cg5BsdVXh1SkHEosGgciQaXenvLD8MFkW9Kxf-');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   flex-direction: row;
+  overflow-y: hidden;
 }
 /* Social Side */
 .socialContainer{
   order: 1;
-  /* background: white; */
-  width: 50%;
+  width: 38%;
   height: auto;
   display: flex;
   flex-direction: column;
 }
-.recentmsg{
-  order: 1;
-  background: lightblue;
-  width: 100px;
-  height: 100px;
+.secLogin{
+width: 50px;
+height: 20px;
 }
+.authCont{
+  width: 125px;
+  height: 27px;
+}
+.authbtn{
+  width: 50px;
+  height: 23px;
+  margin-left: 10px;
+  border-radius: 3px;
+  background-color: rgb(175, 22, 22);
+}
+.welcomeCont{
+  width: 344px;
+  height: 200px;
+  /* background: green; */
+  padding: 15px;
+}
+.welcome{
+  font-size: 34px;
+  color: white;
+  font-family: 'Nixie One', cursive;
+  /* color: yellow; */
+  margin-bottom: 25px;
+}
+.intro{
+  font-family: 'Nixie One', cursive;
+  color: white;
+  font-size: 16px;
+}
+
 .social-box{
   order: 2;
   width: 500px;
   height: 300px;
-  margin: 15px 15px;
-  /* background: lightgreen; */
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
   
 }
 .ytb{
   background: url('https://image.flaticon.com/icons/png/512/12/12178.png');
   background-size: cover; 
-  width: 150px;
-  height: 150px;
-  margin: 10px;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
   display: inline-block;
 }
 .twttr{
   background: url('https://www.shareicon.net/data/512x512/2015/09/09/98251_logo_512x512.png');
   background-size: cover; 
-  width: 150px;
-  height: 150px;
-  margin: 10px;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
   display: inline-block;
 }
 .fcbk{
   background: url('http://simpleicon.com/wp-content/uploads/facebook-3.svg');
   background-size: cover; 
-  width: 150px;
-  height: 150px;
-  margin: 10px;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
   display: inline-block;
 }
 .nstgrm{
   background: url('https://image.flaticon.com/icons/svg/61/61164.svg');
   background-size: cover; 
-  width: 150px;
-  height: 150px;
-  margin: 10px;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
   display: inline-block;
 }
 
 .socialbtn{
   display: inline-block;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   margin: 35px;
 }
 
@@ -75,18 +104,112 @@
 .bookinfo{
   order: 2;
   /* background: green; */
-  width: 80%;
-  height: auto;
+  width: 90%;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   margin-left: 15px;
+  padding-top: 30px;
+  overflow-y: hidden;
 }
-.testDiv{
-  width: 100px;
-  height: 100px;
-  background: teal;
+.coverPic{
+  background-image: url('./coverPic.jpg');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: left top;
+  transform: rotate(-5deg);
+  width: 325px;
+  height: 435px;
+  margin-left: 19px;
+}
+.bookDesCont{
+  width: 345px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background: green; */
+}
+.bookDes{
+  font-size: 20px;
+  font-family: 'Nixie One', cursive;
+  color: white;
+  line-height: 1.5em;
 }
 
-.buyLinkLanding{
-  height: 25px;
+.buybtnLand{
+  width: 250px;
+  height: 65px;
+  font-size: 20px;
+  margin-top: 20px;
+  font-family: 'Nixie One', cursive;
+  border-radius: 13px;
+  background-color: rgb(0, 255, 13);
+}
+
+/* responsive */
+
+@media(max-width: 400px){
+  .mainLanding{
+    width: 100%;
+    height: 100vh;
+    background: gray;
+    display: inline;
+  }
+  .socialContainer .welcomeCont .welcome .intro{
+    display: none;
+    visibility: hidden;
+  }
+  .bookinfo{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .social-box{  
+    width: 100%px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+  }
+  .socialbtn{
+    display: inline;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+  }
+  .ytb{
+    background: url('https://image.flaticon.com/icons/png/512/12/12178.png');
+    background-size: cover; 
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    display: inline-block;
+  }
+  .twttr{
+    background: url('https://www.shareicon.net/data/512x512/2015/09/09/98251_logo_512x512.png');
+    background-size: cover; 
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    display: inline-block;
+  }
+  .fcbk{
+    background: url('http://simpleicon.com/wp-content/uploads/facebook-3.svg');
+    background-size: cover; 
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    display: inline-block;
+  }
+  .nstgrm{
+    background: url('https://image.flaticon.com/icons/svg/61/61164.svg');
+    background-size: cover; 
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    display: inline-block;
+  }
 }

@@ -42,16 +42,14 @@ class App extends Component {
             <div onClick={this.slide} className='ham-menu'>
             </div>
           </nav>
-          <div className={
-            this.state.slide ?
-              'menu slide' :
-              'menu'
-          }>
-            <Link to='/contact'><p className="menubtn">Contact</p></Link>
-            <Link to='/blog'><p className="menubtn">Blog</p></Link>
-            <Link to='/books'><p className="menubtn">Books</p></Link>
-            <Link to='/about'><p className="menubtn">About</p></Link>
-            <Link to='/'><p className="menubtn">Home</p></Link>
+          <div className='slider'>
+            <div className={this.state.slide ? 'menu slide' : 'menu'}>
+              <Link to='/'><p className="menubtn">Home</p></Link>
+              <Link to='/about'><p className="menubtn">About</p></Link>
+              <Link to='/books'><p className="menubtn">Books</p></Link>
+              <Link to='/blog'><p className="menubtn">Blog</p></Link>
+              <Link to='/contact'><p className="menubtn">Contact</p></Link>
+            </div>
           </div>
           {routes}
         </header>

@@ -36,23 +36,23 @@ export default class Contact extends Component {
 
     render() {
         return (
-            <div className='mainBod'>
+            <div className='mainBodContact'>
                 <div className='container'>
 
                     <div className='contact'>
-                        <h3>Email Me</h3>
+                        <h3 className='email'>Email Me</h3><br/>
                         <form className='contForm' onSubmit={this.handleClick}>
                             <p>
                                 <label>Name</label>
-                                <input type='text' ref="name" />
+                                <input className='contIn' type='text' ref="name" />
                             </p>
                             <p>
                                 <label>Email Address</label>
-                                <input type="email" ref="email" />
+                                <input className='contIn' type="email" ref="email" />
                             </p>
                             <p>
                                 <label>Message</label>
-                                <textarea ref="message" rows="7"></textarea>
+                                <textarea className='contMes' ref="message" rows="7"></textarea>
                             </p>
                             <button type="submit">Submit</button>
 
