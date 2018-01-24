@@ -48,7 +48,7 @@ export default class Books extends Component {
 
     render() {
         let charBio = this.state.charBio.map(char =>
-            <div key={char.id}>
+            <div className='charBio' key={char.id}>
                 <br />
                 <br />
                 <br />

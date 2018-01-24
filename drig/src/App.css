@@ -66,7 +66,7 @@
 }
 .menu{
   width: 200px;
-  height: 200px;
+  height: 250px;
   margin-top: 54px;
   background-image: url('https://www.phyramid.com/images/blog/making-phyramid-coms-procedurally-rendered-3d-header/header-background-indexed.png');
   background-size: cover;
@@ -82,7 +82,7 @@
   font-family: 'Nixie One', cursive;
   font-size: 20px;
   color: #9e220c;
-  margin: 20px;
+  margin: 23px;
   
 }
 .slide {
@@ -135,6 +135,7 @@
   .menu{
     display: inline;
     overflow-x: hidden;
+    z-index: 5;
   }
 }
 

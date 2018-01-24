@@ -17,7 +17,7 @@ export default class Blog extends Component {
             isAdmin: false,
             messageid: ''
         }
-        
+
     }
 
 
@@ -107,18 +107,18 @@ export default class Blog extends Component {
     }
 
     render() {
-       
+
         let messages = this.state.messages.map(message =>
-            <div key={message.id}>
-                <h1 className='blogTitle'>{message.title}</h1><br />
-                <h3 className='blodDate'>{message.date}</h3><br />
+            <div className='blogPost' key={message.id}>
+                <h1 className='blogTitle'>{message.title}</h1>
+                <h3 className='blogDate'>{message.date}</h3><br />
                 <h2 className='blogAuth'>{message.author}</h2><br />
                 <p className='blogMes'>{message.message}</p><br />
-                {this.state.isAdmin?
-                <div><button className='delPostBtn' onClick={() => this.deletePost(message.id)} >Delete</button>
-                    <button className='editPostBtn' onClick={() => this.editPost(message.id)} >Edit</button>
-                </div>
-                : null}
+                {this.state.isAdmin ?
+                    <div><button className='delPostBtn' onClick={() => this.deletePost(message.id)} >Delete</button>
+                        <button className='editPostBtn' onClick={() => this.editPost(message.id)} >Edit</button>
+                    </div>
+                    : null}
                 {this.state.toEdit && this.state.messageid == message.id ?
                     <p>
                         <label>Title:</label>
@@ -139,8 +139,9 @@ export default class Blog extends Component {
         return (
             <div className='mainBod'>
                 <div className='blogCont'>
-
-                    {messages}
+                    <div className='blogMesBox'>
+                        {messages}
+                    </div>
                 </div>
             </div>
         )

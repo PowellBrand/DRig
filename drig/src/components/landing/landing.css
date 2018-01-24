@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Audiowide|Nixie+One");
 .mainLanding{
   width: 100%;
-  height: 100vh;
+  height: 100vw;
   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqS__RpIHeu4cg5BsdVXh1SkHEosGgciQaXenvLD8MFkW9Kxf-');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
   flex-direction: row;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 /* Social Side */
 .socialContainer{
@@ -36,7 +36,6 @@ height: 20px;
 .welcomeCont{
   width: 344px;
   height: 200px;
-  /* background: green; */
   padding: 15px;
 }
 .welcome{
@@ -57,11 +56,10 @@ height: 20px;
   width: 500px;
   height: 300px;
   display: flex;
-  flex-wrap: wrap; 
-  
+  flex-wrap: wrap;  
 }
 .ytb{
-  background: url('https://image.flaticon.com/icons/png/512/12/12178.png');
+  background: url('https://cdn1.iconfinder.com/data/icons/logotypes/32/youtube-256.png');
   background-size: cover; 
   width: 100px;
   height: 100px;
@@ -69,7 +67,7 @@ height: 20px;
   display: inline-block;
 }
 .twttr{
-  background: url('https://www.shareicon.net/data/512x512/2015/09/09/98251_logo_512x512.png');
+  background: url('http://icons.iconarchive.com/icons/limav/flat-gradient-social/256/Twitter-icon.png');
   background-size: cover; 
   width: 100px;
   height: 100px;
@@ -77,7 +75,7 @@ height: 20px;
   display: inline-block;
 }
 .fcbk{
-  background: url('http://simpleicon.com/wp-content/uploads/facebook-3.svg');
+  background: url('http://www.iconarchive.com/download/i49146/yootheme/social-bookmark/social-facebook-box-blue.ico');
   background-size: cover; 
   width: 100px;
   height: 100px;
@@ -85,7 +83,7 @@ height: 20px;
   display: inline-block;
 }
 .nstgrm{
-  background: url('https://image.flaticon.com/icons/svg/61/61164.svg');
+  background: url('https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png');
   background-size: cover; 
   width: 100px;
   height: 100px;
@@ -103,14 +101,13 @@ height: 20px;
 /* Book Side */
 .bookinfo{
   order: 2;
-  /* background: green; */
   width: 90%;
   height: 100vh;
   display: flex;
   flex-direction: row;
   margin-left: 15px;
   padding-top: 30px;
-  overflow-y: hidden;
+  
 }
 .coverPic{
   background-image: url('./coverPic.jpg');
@@ -118,6 +115,7 @@ height: 20px;
   background-repeat: no-repeat;
   background-position: left top;
   transform: rotate(-5deg);
+  /* box-shadow: 5px 10px rgb(83, 82, 82); */
   width: 325px;
   height: 435px;
   margin-left: 19px;
@@ -143,12 +141,265 @@ height: 20px;
   height: 65px;
   font-size: 20px;
   margin-top: 20px;
-  font-family: 'Nixie One', cursive;
+  font-family: 'Audiowide', cursive;
+  font-weight: bolder;
   border-radius: 13px;
   background-color: rgb(0, 255, 13);
+  outline: none;
 }
 
 /* responsive */
+@media(max-width: 1055px){
+.coverPic{
+  width: 280px;
+  height: 390px;
+  margin-left: 19px;
+}
+.bookDesCont{
+  width: 300px;
+  height: 475px;
+  margin-left: 20px;
+}
+}
+@media(max-width: 999px){
+  .coverPic{
+    width: 280px;
+    height: 390px;
+    margin-left: 19px;
+    transform: none;
+  }
+  .bookDesCont{
+    width: 280px;
+    height: 445px;
+    margin-left: 0;
+  }
+}
+@media(max-width: 900px){
+  .coverPic{
+    width: 245px;
+    height: 355px;
+    margin-left: 5px;
+    transform: none;
+  }
+  .bookDesCont{
+    width: 280px;
+    height: 445px;
+    margin-left: 0;
+  }
+}
+@media(max-width: 895px){
+  .authCont{
+    margin-top: 10px;
+  }
+  .welcome{
+    font-size: 30px;
+  }
+  .welcomeCont{
+    width: 325px;
+    height: 235px;
+    padding: 15px;
+  }
+}
+@media(max-width: 860px){
+  .coverPic{
+    width: 200px;
+    height: 300px;
+    margin-left: 5px;
+    transform: none;
+  }
+  .bookDesCont{
+    width: 240px;
+    height: 375px;
+    margin-left: 5px; 
+  }
+  .bookDes{
+    font-size: 15px;
+  }
+  .buybtnLand{
+    width: 230px;
+    height: 40px;
+    font-size: 18px;
+    margin-top: 20px;
+    font-family: 'Audiowide', cursive;
+    font-weight: bolder;
+    border-radius: 13px;
+    background-color: rgb(0, 255, 13);
+    outline: none;
+  }
+  .authCont{
+    margin-top: 10px;
+  }
+  .welcome{
+    font-size: 28px;
+  }
+  .welcomeCont{
+    width: 305px;
+    height: 225px;
+    padding: 15px;
+  }
+}
+@media(max-width: 795px){
+ 
+  .mainLanding{
+    height: 100vh;
+  }
+  .bookinfo{
+    width: 90%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    padding-top: 30px;
+  }
+  .coverPic{
+    background-image: url('./coverPic.jpg');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: left top;
+    transform: rotate(-5deg);
+    width: 333px;
+    height: 500px;
+    margin-left: 90px;
+    z-index: 1;
+  }
+  .bookDesCont{
+    width: 345px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 35px;
+  }
+  .bookDes{
+    font-size: 18px;
+    font-family: 'Nixie One', cursive;
+    color: white;
+    line-height: 1.5em;
+  }
+}
+@media(max-width: 690px){
+ 
+  .social-box{
+    order: 2;
+    width: 300px;
+    height: 275px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;  
+  }
+  .socialbtn{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 40px;
+  }
+  .ytb{
+    background: url('https://cdn1.iconfinder.com/data/icons/logotypes/32/youtube-256.png');
+    background-size: cover; 
+    width: 75px;
+    height: 75px;
+    margin: 5px;
+    display: inline-block;
+  }
+  .twttr{
+    background: url('http://icons.iconarchive.com/icons/limav/flat-gradient-social/256/Twitter-icon.png');
+    background-size: cover; 
+    width: 75px;
+    height: 75px;
+    margin: 5px;
+    display: inline-block;
+  }
+  .fcbk{
+    background: url('http://www.iconarchive.com/download/i49146/yootheme/social-bookmark/social-facebook-box-blue.ico');
+    background-size: cover; 
+    width: 75px;
+    height: 75px;
+    margin: 5px;
+    display: inline-block;
+  }
+  .nstgrm{
+    background: url('https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png');
+    background-size: cover; 
+    width: 75px;
+    height: 75px;
+    margin: 5px;
+    display: inline-block;
+  }
+}
+@media(max-width: 665px){
+  .mainLanding{
+    width: 100%;
+    height: 100vw;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqS__RpIHeu4cg5BsdVXh1SkHEosGgciQaXenvLD8MFkW9Kxf-');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column-reverse;
+    
+  }
+  .bookinfo{
+    order: 2;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    padding-top: 30px;
+    
+  }
+  .coverPic{
+    /* background: green; */
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: left top;
+    /* width: 375px; */
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 200px;
+    transform: none;
+  }
+  .bookDesCont{
+    /* background: red; */
+    width: 345px;
+    height: 450px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */   
+  }
+  .bookDes{
+    font-size: 12px;
+  }
+  .welcomeCont{
+    display: none;
+  }
+  .socialContainer{
+    order: 1;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .authCont{
+    justify-content: center;
+    align-content: center;
+    margin-left: 250px;
+    margin-top: 15px;
+  }
+  .social-box{
+    order: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;  
+  }
+  
+}
 
 @media(max-width: 400px){
   .mainLanding{

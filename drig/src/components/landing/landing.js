@@ -28,8 +28,6 @@ export default class Landing extends Component {
                         <a className='socialbtn' href ="https://twitter.com/davrilor"><div className='twttr'></div></a>
                         <a className='socialbtn' href ="https://www.facebook.com/david.rigtrup.5"><div className='fcbk'></div></a>
                         <a className='socialbtn' href ="https://www.instagram.com/david_rigtrup/"><div className='nstgrm'></div></a>
-                        
-                     
                     </div>
                 </div>
                 <div className="bookinfo">

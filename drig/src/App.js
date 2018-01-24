@@ -53,8 +53,7 @@ class App extends Component {
           </div>
           {routes}
         </header>
-        <footer className='mainFoot'>
-        </footer>
+        
       </div>
     );
   }
