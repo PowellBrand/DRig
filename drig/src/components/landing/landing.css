@@ -135,6 +135,29 @@ height: 20px;
   color: white;
   line-height: 1.5em;
 }
+@-webkit-keyframes pulse {
+  25% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  75% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@keyframes pulse {
+  25% {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  75% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
 
 .buybtnLand{
   width: 250px;
@@ -145,7 +168,21 @@ height: 20px;
   font-weight: bolder;
   border-radius: 13px;
   background-color: rgb(0, 255, 13);
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   outline: none;
+}
+.buyLinkLanding:hover {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
 
 /* responsive */
@@ -242,6 +279,7 @@ height: 20px;
  
   .mainLanding{
     height: 100vh;
+    padding-bottom: 100vh;
   }
   .bookinfo{
     width: 90%;
@@ -352,11 +390,9 @@ height: 20px;
     
   }
   .coverPic{
-    /* background: green; */
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: left top;
-    /* width: 375px; */
     height: 500px;
     justify-content: center;
     align-items: center;
@@ -364,13 +400,8 @@ height: 20px;
     transform: none;
   }
   .bookDesCont{
-    /* background: red; */
     width: 345px;
     height: 450px;
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */   
   }
   .bookDes{
     font-size: 12px;
@@ -408,8 +439,8 @@ height: 20px;
     background-size: cover;
     /* background-repeat: no-repeat; */
     background-position: center;
-    display: flex;
-    flex-direction: column-reverse;
+    display: inline-flex;
+    /* flex-direction: column-reverse; */
     
   }
   .bookinfo{
