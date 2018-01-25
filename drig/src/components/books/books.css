@@ -1,4 +1,4 @@
-
+@import url("https://fonts.googleapis.com/css?family=Audiowide|Nixie+One");
 
 .mainBookCont{
     background-image: url('./bookBG.jpg');
@@ -8,10 +8,17 @@
     width: 100%;
     height: auto;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
+}
+.worldCont{
+    width: 100%;
+    margin: 5px 400px;
 }
 .charBio, .worldInfo{
     color: red;
+    font-family: 'Nixie One', cursive;
 }
 
 .buyLinkBook{
