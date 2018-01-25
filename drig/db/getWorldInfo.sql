@@ -1,4 +1,4 @@
-select worldinfo.name, worldinfo.description
+select distinct on (worldinfo.name) worldinfo.name, worldinfo.description
 from worldinfo
 join characters
 on worldinfo.locid = characters.locid

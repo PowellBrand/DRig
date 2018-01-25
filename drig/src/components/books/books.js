@@ -25,6 +25,16 @@ export default class Books extends Component {
             .catch((e) => {
                 console.log(e)
             });
+        axios.get('/books/worldinfo')
+            .then(({ data }) => {
+                this.setState({
+                    worldInfo: data
+                })
+            })
+            .catch((e) => {
+                console.log(e)
+            });
+
         axios.get('auth/me').then(({ data }) => {
             this.setState({
                 isAdmin: data
@@ -37,13 +47,21 @@ export default class Books extends Component {
             isAdmin: !this.state.admin
         })
     }
-    deleteChar(id){
+    deleteChar(id) {
         axios.delete(`/books/delete/${id}`)
-        .then((res)=> {
-            this.setState({
-                charBio: res.data
+            .then((res) => {
+                this.setState({
+                    charBio: res.data
+                })
             })
-        })
+    }
+    deleteWorld(id) {
+        axios.delete(`/books/delete/world/${id}`)
+            .then((res) => {
+                this.setState({
+                    worldInfo: res.data
+                })
+            })
     }
 
     render() {
@@ -78,13 +96,25 @@ export default class Books extends Component {
                     : null}
             </div>
         )
+        let worldInfo = this.state.worldInfo.map(world =>
+            <div className='worldInfo' key={world.id}>        
+                <br />
+                <p>Name: {world.name}</p>
+                <p>Description: {world.description}</p>
+                {this.state.isAdmin ?
+                    <div>
+                        <button className='delPostBtn' onClick={() => this.deleteWorld(world.id)} >Delete</button>
+                    </div>
+                    : null}
+            </div>
+        )
         return (
             <div className='mainBookCont'>
                 <a className='buyLinkBook' href="https://www.amazon.com/Nocturnal-Spirits-1-David-Rigtrup/dp/1975807790/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr="><button className='buybtn'>BUY A COPY TODAY!</button></a>
                 <div className="noName">
                     {charBio}
                     <div className="worldCont">
-
+                        {worldInfo}
                     </div>
                 </div>
             </div>

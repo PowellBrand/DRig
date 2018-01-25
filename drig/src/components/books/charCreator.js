@@ -62,7 +62,7 @@ export default class CharCreator extends Component {
     handleName(e) {
 
         this.setState({
-            name: e,
+            name: e
 
         })
     }

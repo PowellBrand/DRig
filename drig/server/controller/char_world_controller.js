@@ -34,10 +34,22 @@ module.exports = {
     },
     createWorld: (req, res) => {
         const db = req.app.get('db');
-        const { name, locID, desc } = req.body
-        db.createWorld(name, locID, desc).then(() => {
+        const { name, locid, description } = req.body
+        db.createWorld(name, locid, description).then(() => {
             res.status(200).send()
         }).catch(() => res.status(500).send())
+    },
+    deleteWorld: (req, res) => {
+        const db = req.app.get('db');
+        const {params} = req;
+        db.deleteWorld([params.id]).then(()=> {
+            db.getWorldInfo().then((result)=> {
+                res.status(200).send(result)
+            }).catch((e)=> {
+                console.log(e)
+                res.status(500).send()
+            })
+        })
     },
     getWorldInfo: (req, res) => {
         const db = req.app.get('db');

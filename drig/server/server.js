@@ -127,6 +127,9 @@ app.post('/books/character/post', charWorldController.createChar)
 //Delete Character Bio
 app.delete('/books/delete/:id', charWorldController.deleteChar)
 
+//Delete World
+app.delete('/books/delete/world/:id', charWorldController.deleteWorld)
+
 //Get Character Info
 app.get('/books/characters', charWorldController.getCharBio)
 
