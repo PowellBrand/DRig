@@ -5,8 +5,10 @@
   background: lightgray;
   width: 100%;
   height: 100vh;
+  white-space: nowrap;
   display: flex;
   flex-direction: row;
+  overflow-x: auto;
 }
 /* End Main body */
 
@@ -48,6 +50,7 @@
   font-family: 'Audiowide', cursive;
   color: #9e220c;
   font-size: 50px;
+  margin-left: 10px;
   width: auto;
   position: relative;
   top: 18px;
@@ -64,6 +67,7 @@
   float: right;
   opacity: 0;
 }
+
 .menu{
   width: 200px;
   height: 250px;
@@ -76,7 +80,7 @@
   top: 55px;
   overflow: hidden;
   transition: .5s;
-  display: none;
+  display: inline-block;
 }
 .menubtn{
   font-family: 'Nixie One', cursive;
@@ -87,6 +91,11 @@
 }
 .slide {
   right: 0px;
+  /* width: 400px; */
+  overflow-x: auto;
+  border:1px solid black;
+  white-space: nowrap; 
+  font-size: 0;
 }
 
 /* responsive header start */
@@ -106,7 +115,6 @@
     top: -15px;
   }
 }
-
 @media(max-width: 795px){
   .navbtn{
    display: none;
@@ -117,6 +125,40 @@
     font-size: 40px;
     width: auto;
     position: relative;
+    margin-left: 10px;
+    top: 18px;
+  }
+  .mainNav{
+    height: 110px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .ham-menu{
+    opacity: 1;
+    margin-top: 34px;
+  }
+  body{
+    overflow: hidden;
+  }
+  .menu{
+    display: inline;
+    overflow-x: hidden;
+    z-index: 5;
+  }
+}
+
+@media(max-width: 768px){
+  .navbtn{
+   display: none;
+  }
+  .DR{
+    font-family: 'Audiowide', cursive;
+    color: #9e220c;
+    font-size: 40px;
+    width: auto;
+    position: relative;
+    margin-left: 10px;
     top: 18px;
   }
   .mainNav{
@@ -146,6 +188,7 @@
     font-size: 40px;
     width: auto;
     position: relative;
+    margin-left: 10px;
     top: 33px;
   }
   .ham-menu{
@@ -168,7 +211,37 @@
     right: 0px;
   }
 }
-
+@media(max-width: 360px){
+  
+  .DR{
+    font-family: 'Audiowide', cursive;
+    color: #9e220c;
+    font-size: 35px;
+    width: auto;
+    position: relative;
+    top: 20px;
+    margin-left: 15px;
+  }
+  .ham-menu{
+    position: relative;
+    left: 20px;
+    opacity: 1;
+    margin-top: 44px; 
+  }
+  .menu{
+    /* width: 200px;
+    height: 250px;
+    position: absolute; */
+    right: -292px;
+    /* top: 55px; */
+    overflow: hidden;
+    /* transition: .5s; */
+    /* display: none; */
+  }
+  .slide {
+    right: 0px;
+  }
+}
 /* End Header css */
 
 

@@ -66,10 +66,7 @@ export default class Books extends Component {
 
     render() {
         let charBio = this.state.charBio.map(char =>
-            <div className='charBio' key={char.id}>
-                <br />
-                <br />
-                <br />
+            <div className='bookInfo' key={char.id}>
                 <br />
                 <p>Name: {char.name}</p>
                 <p>Full Name: {char.full_name}</p>
@@ -97,7 +94,7 @@ export default class Books extends Component {
             </div>
         )
         let worldInfo = this.state.worldInfo.map(world =>
-            <div className='worldInfo' key={world.id}>
+            <div className='bookInfo' key={world.id}>
                 <br />
                 <p>Name: {world.name}</p>
                 <p>Description: {world.description}</p>
@@ -109,8 +106,8 @@ export default class Books extends Component {
             </div>
         )
         return (
+            // for parallax, use mainBookCont as the outermost layer and bookInfo for the inner-most layer.
             <div className='mainBookCont'>
-                {/* <a className='buyLinkBook' href="https://www.amazon.com/Nocturnal-Spirits-1-David-Rigtrup/dp/1975807790/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr="><button className='buybtn'>BUY A COPY TODAY!</button></a> */}
                 <div className="worldCont">
                     {charBio}
 

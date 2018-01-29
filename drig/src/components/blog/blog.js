@@ -113,7 +113,7 @@ export default class Blog extends Component {
                 <h1 className='blogTitle'>{message.title}</h1>
                 <h3 className='blogDate'>{message.date}</h3><br />
                 <h2 className='blogAuth'>{message.author}</h2><br />
-                <p className='blogMes'>{message.message}</p><br />
+                <div className='blogMes'>{message.message.split('\n').map(line => <p>{line}</p>)}</div><br />
                 {this.state.isAdmin ?
                     <div><button className='delPostBtn' onClick={() => this.deletePost(message.id)} >Delete</button>
                         <button className='editPostBtn' onClick={() => this.editPost(message.id)} >Edit</button>
