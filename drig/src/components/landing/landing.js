@@ -31,10 +31,7 @@ export default class Landing extends Component {
                     </div>
                 </div>
                 <div className="bookinfo">
-                    <div className='coverPic'>
-                        {/* <img src={coverPic} alt='' /> */}
-
-                    </div>
+                    <div className='coverPic'></div>
                     <div className='bookDesCont'>
                         <p className='bookDes'>A sci-fantasy novel set in a dystopien city with a strong female protagonist surrounded by complex side characters.</p><br/>
                         <p className='bookDes'>Nocturnal is built on interesting dialogue, intense action, with a bit of philosphy tying everything together.</p><br/>

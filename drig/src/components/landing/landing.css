@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Audiowide|Nixie+One");
 .mainLanding{
   width: 100%;
-  height: 100vw;
+  height: 105vh;
   background-image: url('https://www.phyramid.com/images/blog/making-phyramid-coms-procedurally-rendered-3d-header/header-background-indexed.png');
   /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqS__RpIHeu4cg5BsdVXh1SkHEosGgciQaXenvLD8MFkW9Kxf-'); */
   background-size: cover;
@@ -373,7 +373,7 @@ height: 20px;
   .mainLanding{
     width: 100%;
     height: 100vw;
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqS__RpIHeu4cg5BsdVXh1SkHEosGgciQaXenvLD8MFkW9Kxf-');
+    /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqS__RpIHeu4cg5BsdVXh1SkHEosGgciQaXenvLD8MFkW9Kxf-'); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -437,19 +437,19 @@ height: 20px;
   .mainLanding{
     width: 100%;
     height: 100vw;
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqS__RpIHeu4cg5BsdVXh1SkHEosGgciQaXenvLD8MFkW9Kxf-');
+    /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqS__RpIHeu4cg5BsdVXh1SkHEosGgciQaXenvLD8MFkW9Kxf-'); */
     background-size: cover;
-    /* background-repeat: no-repeat; */
     background-position: center;
-    display: inline-flex;
-    /* flex-direction: column-reverse; */
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column-reverse;
     
   }
   .bookinfo{
     order: 2;
     width: 100%;
     height: 100vh;
-    display: flex;
+    display: block;
     flex-direction: column;
     margin-left: 15px;
     padding-top: 30px;
@@ -457,25 +457,22 @@ height: 20px;
   }
   .coverPic{
     /* background: green; */
-    background-size: auto 100%;
+    background-size: auto;
     background-repeat: no-repeat;
-    background-position: left top;
-    /* width: 375px; */
-    height: 500px;
+    position: relative;
+    width: 375px;
+    height: 375px;
+    margin: 0 0 0 80px;
+    top: 5px;
     justify-content: center;
     align-items: center;
-    margin-left: 200px;
     transform: none;
   }
   .bookDesCont{
-    /* background: red; */
-    margin-top: 60px;
-    width: 345px;
-    /* height: 700px; */
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; */   
+    margin: 0;
+    position: relative;
+    bottom: 90px;
+    left: 28px
   }
   .bookDes{
     font-size: 12px;
@@ -486,84 +483,235 @@ height: 20px;
   .socialContainer{
     order: 1;
     width: 100%;
-    height: auto;
+    height: 100px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
+    position: relative;
+    top: 120px;
   }
-  .authCont{
-    justify-content: center;
-    align-content: center;
-    margin-left: 250px;
-    margin-top: 15px;
+  .authbtn{
+    position: relative;
+    right: 120px;
+    bottom: 130px;
+  }
+  .socialbtn{
+    margin: 0;
   }
   .social-box{
     order: 2;
-    width: 100%;
+    width: 400px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;  
   }
 }
-
-@media(max-width: 400px){
+@media(max-width: 375px){
   .mainLanding{
     width: 100%;
-    height: 100vh;
-    background: gray;
-    display: inline;
-  }
-  .socialContainer .welcomeCont .welcome .intro{
-    display: none;
-    visibility: hidden;
+    height: 100vw;
+    /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqS__RpIHeu4cg5BsdVXh1SkHEosGgciQaXenvLD8MFkW9Kxf-'); */
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+    
   }
   .bookinfo{
+    order: 2;
     width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
+    height: 100vh;
+    display: block;
+    flex-direction: column;
+    margin-left: 15px;
+    padding-top: 30px;
+    
+  }
+  .coverPic{
+    /* background: green; */
+    background-size: auto;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 375px;
+    height: 375px;
+    margin: 0 0 0 80px;
+    top: 33px;
+    right: 25px;
+    justify-content: center;
+    align-items: center;
+    transform: none;
+  }
+  .bookDesCont{
+    margin: 0;
+    position: relative;
+    bottom: 90px;
+    left: 9px
+  }
+  .bookDes{
+    font-size: 12px;
+  }
+  .welcomeCont{
+    display: none;
   }
   
-  .social-box{  
-    width: 100%px;
-    height: 100px;
+  .authbtn{
+    position: relative;
+    right: 140px;
+    bottom: 130px;
+  }
+  .social-box{
+    order: 2;
+    width: 300px;
+    height: 275px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;  
   }
   .socialbtn{
-    display: inline;
+    display: inline-block;
+    position: relative;
+    bottom: 90px;
+    left: 26px;
     width: 50px;
     height: 50px;
-    margin: 10px;
+    margin: 40px;
   }
   .ytb{
-    background: url('https://image.flaticon.com/icons/png/512/12/12178.png');
+    background: url('https://cdn1.iconfinder.com/data/icons/logotypes/32/youtube-256.png');
     background-size: cover; 
-    width: 40px;
-    height: 40px;
+    width: 75px;
+    height: 75px;
     margin: 5px;
     display: inline-block;
   }
   .twttr{
-    background: url('https://www.shareicon.net/data/512x512/2015/09/09/98251_logo_512x512.png');
+    background: url('http://icons.iconarchive.com/icons/limav/flat-gradient-social/256/Twitter-icon.png');
     background-size: cover; 
-    width: 40px;
-    height: 40px;
+    width: 75px;
+    height: 75px;
     margin: 5px;
     display: inline-block;
   }
   .fcbk{
-    background: url('http://simpleicon.com/wp-content/uploads/facebook-3.svg');
+    background: url('http://www.iconarchive.com/download/i49146/yootheme/social-bookmark/social-facebook-box-blue.ico');
     background-size: cover; 
-    width: 40px;
-    height: 40px;
+    width: 75px;
+    height: 75px;
     margin: 5px;
     display: inline-block;
   }
   .nstgrm{
-    background: url('https://image.flaticon.com/icons/svg/61/61164.svg');
+    background: url('https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png');
     background-size: cover; 
-    width: 40px;
-    height: 40px;
+    width: 75px;
+    height: 75px;
+    margin: 5px;
+    display: inline-block;
+  }
+}
+@media(max-width: 320px){
+  .mainLanding{
+    width: 100%;
+    height: 100vw;
+    /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqS__RpIHeu4cg5BsdVXh1SkHEosGgciQaXenvLD8MFkW9Kxf-'); */
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+    
+  }
+  .bookinfo{
+    order: 2;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    flex-direction: column;
+    margin-left: 15px;
+    padding-top: 30px;
+    
+  }
+  .coverPic{
+    /* background: green; */
+    background-size: auto;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 350px;
+    height: 375px;
+    margin: 0 0 0 45px;
+    top: 15px;
+    right: 25px;
+    justify-content: center;
+    align-items: center;
+    transform: none;
+  }
+  .bookDesCont{
+    margin: 0;
+    width: 275px;
+    padding: 8px;
+    position: relative;
+    bottom: 90px;
+    left: 9px
+  }
+  .bookDes{
+    font-size: 12px;
+  }
+  .welcomeCont{
+    display: none;
+  }
+  
+  .authbtn{
+    position: relative;
+    right: 165px;
+    bottom: 130px;
+  }
+  .social-box{
+    order: 2;
+    width: 300px;
+    height: 275px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;  
+  }
+  .socialbtn{
+    display: inline-block;
+    position: relative;
+    bottom: 90px;
+    left: 1px;
+    width: 50px;
+    height: 50px;
+    margin: 40px;
+  }
+  .ytb{
+    background: url('https://cdn1.iconfinder.com/data/icons/logotypes/32/youtube-256.png');
+    background-size: cover; 
+    width: 75px;
+    height: 75px;
+    margin: 5px;
+    display: inline-block;
+  }
+  .twttr{
+    background: url('http://icons.iconarchive.com/icons/limav/flat-gradient-social/256/Twitter-icon.png');
+    background-size: cover; 
+    width: 75px;
+    height: 75px;
+    margin: 5px;
+    display: inline-block;
+  }
+  .fcbk{
+    background: url('http://www.iconarchive.com/download/i49146/yootheme/social-bookmark/social-facebook-box-blue.ico');
+    background-size: cover; 
+    width: 75px;
+    height: 75px;
+    margin: 5px;
+    display: inline-block;
+  }
+  .nstgrm{
+    background: url('https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png');
+    background-size: cover; 
+    width: 75px;
+    height: 75px;
     margin: 5px;
     display: inline-block;
   }

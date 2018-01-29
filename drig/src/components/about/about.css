@@ -6,7 +6,7 @@
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    height: 90vh;
+    height: 87vh;
     display: flex;
     flex-direction: row;
 }
@@ -42,7 +42,7 @@
 @media(max-width: 425px){
     .mainBodAbout{
         width: 100%;
-        height: 90vh;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -76,5 +76,43 @@
        height: 115px;
        position: relative;
        top: 30px;
+    }
+}
+@media(max-width: 320px){
+    .mainBodAbout{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 90vh;
+        overflow-x: hidden;
+    }
+    .profilePicBox{
+        order: 2; 
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* background-position: initial; */
+        margin-top: 80px;
+        margin-left: 0;
+        /* padding: 10px; */
+        width: 400px;
+        height: 530px;
+    }
+    .aboutParaBox{
+        order: 1;
+        width: 100%;
+        height: auto;
+        display: block;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        margin: 10px 30px;
+    }
+    .aboutPara{
+       display: block;
+       padding: 10px;
+       height: 115px;
+       position: relative;
+       top: 5px;
     }
 }

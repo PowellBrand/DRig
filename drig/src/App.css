@@ -8,7 +8,7 @@
   white-space: nowrap;
   display: flex;
   flex-direction: row;
-  overflow-x: auto;
+  white-space: nowrap;
 }
 /* End Main body */
 
@@ -67,7 +67,6 @@
   float: right;
   opacity: 0;
 }
-
 .menu{
   width: 200px;
   height: 250px;
@@ -80,7 +79,7 @@
   top: 55px;
   overflow: hidden;
   transition: .5s;
-  display: inline-block;
+  display: none;
 }
 .menubtn{
   font-family: 'Nixie One', cursive;
@@ -91,11 +90,6 @@
 }
 .slide {
   right: 0px;
-  /* width: 400px; */
-  overflow-x: auto;
-  border:1px solid black;
-  white-space: nowrap; 
-  font-size: 0;
 }
 
 /* responsive header start */
@@ -198,29 +192,23 @@
     margin-top: 44px; 
   }
   .menu{
-    /* width: 200px;
-    height: 250px;
-    position: absolute; */
-    right: -292px;
-    /* top: 55px; */
+    right: -232px;
     overflow: hidden;
-    /* transition: .5s; */
-    /* display: none; */
   }
   .slide {
     right: 0px;
   }
 }
-@media(max-width: 360px){
+@media(max-width: 375px){
   
   .DR{
     font-family: 'Audiowide', cursive;
     color: #9e220c;
-    font-size: 35px;
+    font-size: 33px;
     width: auto;
     position: relative;
-    top: 20px;
-    margin-left: 15px;
+    margin-left: 10px;
+    top: 40px;
   }
   .ham-menu{
     position: relative;
@@ -229,14 +217,33 @@
     margin-top: 44px; 
   }
   .menu{
-    /* width: 200px;
-    height: 250px;
-    position: absolute; */
-    right: -292px;
-    /* top: 55px; */
+    right: -232px;
     overflow: hidden;
-    /* transition: .5s; */
-    /* display: none; */
+  }
+  .slide {
+    right: 0px;
+  }
+}
+@media(max-width: 320px){
+  
+  .DR{
+    font-family: 'Audiowide', cursive;
+    color: #9e220c;
+    font-size: 26px;
+    width: auto;
+    position: relative;
+    margin-left: 10px;
+    top: 46px;
+  }
+  .ham-menu{
+    position: relative;
+    left: 20px;
+    opacity: 1;
+    margin-top: 44px; 
+  }
+  .menu{
+    right: -232px;
+    overflow: hidden;
   }
   .slide {
     right: 0px;
