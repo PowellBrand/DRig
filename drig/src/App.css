@@ -5,10 +5,8 @@
   background: lightgray;
   width: 100%;
   height: 100vh;
-  white-space: nowrap;
   display: flex;
   flex-direction: row;
-  white-space: nowrap;
 }
 /* End Main body */
 
@@ -17,13 +15,14 @@
     background-image: url('https://www.phyramid.com/images/blog/making-phyramid-coms-procedurally-rendered-3d-header/header-background-indexed.png');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 130px;
+    height: 95px;
   }
 .mainNav{
   height: 95px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  z-index: 50;
 }
 
 
@@ -76,7 +75,7 @@
   background-repeat: no-repeat;
   position: absolute;
   right: -200px;
-  top: 55px;
+  top: 40px;
   overflow: hidden;
   transition: .5s;
   display: none;
@@ -99,13 +98,7 @@
     width: 50px;
     height: 25px;
     margin: 0 15px 10px 10px;
-    display: inline;
-    float: right;
     font-size: 20px;
-    font-family: 'Nixie One', cursive;
-    color: #9e220c;
-    text-align: center;
-    position: relative;
     top: -15px;
   }
 }
@@ -114,16 +107,11 @@
    display: none;
   }
   .DR{
-    font-family: 'Audiowide', cursive;
-    color: #9e220c;
     font-size: 40px;
-    width: auto;
-    position: relative;
-    margin-left: 10px;
     top: 18px;
   }
   .mainNav{
-    height: 110px;
+    height: 95px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -147,16 +135,11 @@
    display: none;
   }
   .DR{
-    font-family: 'Audiowide', cursive;
-    color: #9e220c;
     font-size: 40px;
-    width: auto;
-    position: relative;
-    margin-left: 10px;
     top: 18px;
   }
   .mainNav{
-    height: 110px;
+    height: 95px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -177,12 +160,7 @@
 @media(max-width: 425px){
   
   .DR{
-    font-family: 'Audiowide', cursive;
-    color: #9e220c;
     font-size: 40px;
-    width: auto;
-    position: relative;
-    margin-left: 10px;
     top: 33px;
   }
   .ham-menu{
@@ -199,15 +177,15 @@
     right: 0px;
   }
 }
+@media(max-width: 400px){
+  .DR{
+    font-size: 33px;
+  }
+}
 @media(max-width: 375px){
   
   .DR{
-    font-family: 'Audiowide', cursive;
-    color: #9e220c;
     font-size: 33px;
-    width: auto;
-    position: relative;
-    margin-left: 10px;
     top: 40px;
   }
   .ham-menu{
@@ -227,12 +205,7 @@
 @media(max-width: 320px){
   
   .DR{
-    font-family: 'Audiowide', cursive;
-    color: #9e220c;
     font-size: 26px;
-    width: auto;
-    position: relative;
-    margin-left: 10px;
     top: 46px;
   }
   .ham-menu{

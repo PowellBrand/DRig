@@ -52,7 +52,7 @@ passport.use(new Auth0Strategy({
     let { displayName, user_id, email } = profile
     db.find_user([user_id]).then((users) => {
        //logged to console for testing//
-        console.log(users)
+        // console.log(users)
         ///////////////////////////////
         if (!users[0]) {
             db.create_user([

@@ -74,7 +74,7 @@ export default class WorldCreator extends Component {
                             <textarea onChange={(e) => this.handleDes(e.target.value, 'description')} className='msgBox' ref='description' rows="20" cols='50' value={this.state.description} />
                         </p>
                         {this.state.isAdmin ?
-                            <button type="submit">In the beginning...</button>
+                            <button className='blogbtn' type="submit">In the beginning...</button>
                             : null}
                     </form>
                 </div>

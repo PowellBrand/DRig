@@ -108,10 +108,10 @@ export default class BlogPost extends Component {
                         </p>
                         <p>
                             <label>Message:</label>
-                            <textarea onChange={(e)=> this.handleMessage(e.target.value, 'message')} className='msgBox' ref='message' rows="50" cols='145' value={this.state.message} />
+                            <textarea onChange={(e)=> this.handleMessage(e.target.value, 'message')} className='msgBox' ref='message' rows="50" cols='125' value={this.state.message} />
                         </p>
                     {this.state.isAdmin?
-                        <button type="submit">Submit</button>
+                        <button className='blogbtn' type="submit">Submit</button>
                         : null}
                     </form>
                 </div>

@@ -324,7 +324,7 @@ export default class CharCreator extends Component {
                             <textarea onChange={(e) => this.handleBack(e.target.value, 'background')} className='msgBox' ref='background' rows="20" cols='50' value={this.state.background} />
                         </p>
                         {this.state.isAdmin ?
-                            <button type="submit">I am a God!!</button>
+                            <button className='blogbtn' type="submit">I am a God!!</button>
                             : null}
                     </form>
                 </div>

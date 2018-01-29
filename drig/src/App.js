@@ -3,11 +3,12 @@ import routes from './routes';
 import { Link } from 'react-router-dom';
 import './reset.css';
 import './App.css';
-import './components/landing/landing.css'
-import './components/contact/contact.css'
-import './components/books/books.css'
-import './components/blog/blog.css'
-import './components/about/about.css'
+import './components/landing/landing.css';
+import './components/contact/contact.css';
+import './components/books/books.css';
+import './components/blog/blog.css';
+import './components/blog/blogPost.css';
+import './components/about/about.css';
 
 
 class App extends Component {

@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Audiowide|Nixie+One");
 .mainBod{
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqS__RpIHeu4cg5BsdVXh1SkHEosGgciQaXenvLD8MFkW9Kxf-');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqS__RpIHeu4cg5BsdVXh1SkHEosGgciQaXenvLD8MFkW9Kxf-');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -23,6 +23,8 @@
     display: flex;
     justify-content: center;
     padding-right: 85px;
+    overflow-x: hidden;
+    
     /* padding-left: 215px; */
   }
   .blogMesBox{
@@ -33,6 +35,9 @@
     display: flex;
     flex-direction: column;
     /* background: gray; */
+  }
+  .blogPost{
+    padding: 0 10px 0 10px;
   }
   .blogTitle{
     font-size: 40px;
@@ -51,3 +56,8 @@
     margin-top: 6px;
     font-size: 13px;
   }
+  .postEdit{
+    display: flex;
+    flex-direction: column;
+  }
+  
