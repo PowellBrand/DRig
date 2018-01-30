@@ -1,8 +1,9 @@
 .mainBodContact{
-    background-image: url('https://wallup.net/wp-content/uploads/2017/11/17/191918-dystopian-1984-camera-748x421.jpg');
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.253), rgb(94, 90, 90));
+    /* background-image: url('https://wallup.net/wp-content/uploads/2017/11/17/191918-dystopian-1984-camera-748x421.jpg');
     background-size: cover;
     background-repeat: repeat;
-    background-position: fixed 100%;
+    background-position: fixed 100%; */
     width: 100%;
     height: 100vh;
     display: flex;

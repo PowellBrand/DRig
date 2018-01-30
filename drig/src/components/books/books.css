@@ -22,7 +22,7 @@
     height: auto;
     background: lightgray;
     border-radius: 5px;
-    box-shadow: 10px 5px 5px gray;
+    box-shadow: 10px 10px 30px rgb(75, 73, 73);
     padding: 15px;
     margin-bottom: 35px;
     color: red;
