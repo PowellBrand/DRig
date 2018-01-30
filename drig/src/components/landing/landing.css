@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Audiowide|Nixie+One");
 .mainLanding{
   width: 100%;
-  height: 105vh;
+  height: auto;
   background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.253), rgb(94, 90, 90));
   display: flex;
   flex-direction: row;
@@ -16,25 +16,25 @@
   padding-left: 20px;
 }
 .authCont{
-  width: 125px;
-  height: 27px;
-  /* margin-left: 20px; */
+  width: 40%;
+  height: 3%;
+  margin-left: 40px;
 }
 .authbtn{
-  width: 50px;
-  height: 23px;
+  width: 42%;
+  height: 100%;
   margin-left: 10px;
   border-radius: 3px;
   background-color: rgb(175, 22, 22);
   box-shadow: 10px 10px 50px rgb(99, 98, 98);
 }
 .welcomeCont{
-  width: 344px;
-  height: 200px;
+  width: 84%;
+  height: 31%;
   padding: 15px;
 }
 .welcome{
-  font-size: 34px;
+  font-size: 200%;
   /* color: white; */
   font-family: 'Nixie One', cursive;
   color: black;
@@ -44,12 +44,12 @@
   font-family: 'Nixie One', cursive;
   color: white;
   color: black;
-  font-size: 16px;
+  font-size: 100%;
 }
 
 .social-box{
   order: 2;
-  width: 500px;
+  width: 100%;
   height: 300px;
   display: flex;
   flex-wrap: wrap;  
@@ -90,9 +90,9 @@
 
 .socialbtn{
   display: inline-block;
-  width: 100px;
-  height: 100px;
-  margin: 35px;
+  width: 35%;
+  height: 12%;
+  margin: 20px;
 }
 
 /* Book Side */
@@ -117,13 +117,14 @@
   -webkit-transform: rotate(-5deg);
   -ms-transform: rotate(-5deg);
   transform: rotate(-5deg);
-  width: 325px;
-  height: 492px;
+  margin-left: 26px;
+  width: 40%;
+  height: 68%
   /* /* margin-left: 19px; */
 }
 .bookDesCont{
-  width: 345px;
-  height: 450px;
+  width: 50%;
+  height: 66%;
   display: flex;
   margin-left: 55px;
   flex-direction: column;
@@ -188,349 +189,199 @@
 }
 
 /* responsive */
-@media(max-width: 1055px){
-.coverPic{
-  width: 280px;
-  height: 423px;
-  margin-left: 19px;
-}
-.bookDesCont{
-  width: 190px;
-  height: 475px;
-  margin-top: 25px;
-  margin-left: 70px;
-}
-}
-@media(max-width: 999px){
+@media(min-width: 1824px){
   .coverPic{
-    width: 280px;
-    height: 390px;
-    margin-left: 19px;
-    transform: none;
+    margin-left: 26px;
+    width: 27%;
+    height: 67%;
   }
   .bookDesCont{
-    width: 280px;
-    height: 445px;
-    margin-left: 0;
+    margin-left: 100px; 
   }
-}
-@media(max-width: 900px){
-  .coverPic{
-    width: 245px;
-    height: 355px;
-    margin-left: 5px;
-    transform: none;
-  }
-  .bookDesCont{
-    width: 280px;
-    height: 445px;
-    margin-left: 0;
-  }
-}
-@media(max-width: 895px){
-  .authCont{
-    margin-top: 10px;
-  }
-  .welcome{
+  .bookDes{
     font-size: 30px;
   }
   .welcomeCont{
-    width: 325px;
-    height: 235px;
+    width: 90%;
+    height: 31%;
     padding: 15px;
-  }
-}
-@media(max-width: 860px){
-  .coverPic{
-    width: 200px;
-    height: 300px;
-    margin-left: 5px;
-    transform: none;
-  }
-  .bookDesCont{
-    width: 240px;
-    height: 375px;
-    margin-left: 5px; 
-  }
-  .bookDes{
-    font-size: 15px;
-  }
-  .buybtnLand{
-    width: 230px;
-    height: 40px;
-    font-size: 18px;
-    margin-top: 20px;
-    font-family: 'Audiowide', cursive;
-    font-weight: bolder;
-    border-radius: 13px;
-  }
-  .authCont{
-    margin-top: 10px;
   }
   .welcome{
-    font-size: 28px;
+    font-size: 300%;
   }
-  .welcomeCont{
-    width: 325px;
-    height: 225px;
-    padding: 15px;
+  .intro{
+    font-size: 135%;
+  }
+  .authCont{
+    width: 50%;
+    height: 3%;
+    margin-left: 18%;
+  }
+  .authbtn{
+    width: 45%;
+    height: 100%;
+  }
+  .social-box{
+    width: 70%;
+    height: 40%;
+    margin-left: 13%;
+    margin-top: 5%;
   }
 }
-@media(max-width: 795px){
- 
-  .mainLanding{
-    height: 100vh;
-    padding-bottom: 100vh;
-  }
-  .bookinfo{
-    width: 90%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 15px;
-    padding-top: 30px;
-  }
+@media(max-width: 1440px){
   .coverPic{
-    background-image: url('./coverPic.jpg');
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: left top;
-    transform: rotate(-5deg);
-    width: 333px;
-    height: 500px;
-    margin-left: 90px;
-    z-index: 1;
+    margin-left: 26px;
+    width: 34%;
+    height: 70%;
+  }
+}
+@media(max-width: 1055px){
+  .coverPic{
+    width: 58%;
+    height: 74%;
+    margin-left: 19px;
   }
   .bookDesCont{
-    width: 345px;
-    height: 550px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 35px;
+    width: 50%;
+    height: 61%;
+    padding-right: 5%;
+    margin-top: 25px;
+    margin-left: 70px;
   }
-  .bookDes{
-    font-size: 18px;
-    font-family: 'Nixie One', cursive;
-    color: white;
-    color: black;
-    line-height: 1.5em;
+  .welcomeCont{
+    width: 89%;
+    height: 35%;
+  }
+  .authCont{
+    width: 50%;
+  }
+  .social-box{
+    width: 91%;
+    height: 33%;
   }
 }
+
 @media(max-width: 768px){
+  .mainLanding{
+    padding-bottom: 30vh;
+  }
+  .bookinfo{
+    display: block;
+  }
   .coverPic{
-    background-image: url('./coverPic.jpg');
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: left top;
-    transform: rotate(0deg);
-    width: 91px;
-    height: 500px;
-    margin-left: 0px;
+    transform: none;
+    width: 31%;
+    height: 60%;
+    margin-left: 142px;
     padding-left: 90px;
     z-index: 1;
   }
-}
-@media(max-width: 690px){
- 
-  .social-box{
-    order: 2;
-    width: 300px;
-    height: 275px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;  
-  }
-  .socialbtn{
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    margin: 40px;
-  }
-  .ytb{
-    background: url('https://cdn1.iconfinder.com/data/icons/logotypes/32/youtube-256.png');
-    background-size: cover; 
-    width: 75px;
-    height: 75px;
-    margin: 5px;
-    display: inline-block;
-  }
-  .twttr{
-    background: url('http://icons.iconarchive.com/icons/limav/flat-gradient-social/256/Twitter-icon.png');
-    background-size: cover; 
-    width: 75px;
-    height: 75px;
-    margin: 5px;
-    display: inline-block;
-  }
-  .fcbk{
-    background: url('http://www.iconarchive.com/download/i49146/yootheme/social-bookmark/social-facebook-box-blue.ico');
-    background-size: cover; 
-    width: 75px;
-    height: 75px;
-    margin: 5px;
-    display: inline-block;
-  }
-  .nstgrm{
-    background: url('https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png');
-    background-size: cover; 
-    width: 75px;
-    height: 75px;
-    margin: 5px;
-    display: inline-block;
-  }
-}
-@media(max-width: 665px){
-  .mainLanding{
-    width: 100%;
-    height: 100vw;
-    /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqS__RpIHeu4cg5BsdVXh1SkHEosGgciQaXenvLD8MFkW9Kxf-'); */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    flex-direction: column-reverse;
-    
-  }
-  .bookinfo{
-    order: 2;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    margin-left: 15px;
-    padding-top: 30px;
-    
-  }
-  .coverPic{
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: left top;
-    height: 500px;
-    justify-content: center;
-    align-items: center;
-    margin-left: 200px;
-    transform: none;
-  }
   .bookDesCont{
-    width: 345px;
-    height: 450px;
-  }
-  .bookDes{
-    font-size: 12px;
+    width: 69%;
+    height: 70%;
+    margin: 0;
+    padding-left: 16%;
   }
   .welcomeCont{
-    display: none;
-  }
-  .socialContainer{
-    order: 1;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
+    width: 125%;
+    height: 36%;
   }
   .authCont{
-    justify-content: center;
-    align-content: center;
-    margin-left: 250px;
-    margin-top: 15px;
+    width: 100%;
   }
   .social-box{
-    order: 2;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;  
+    width: 119%;
+    height: 44%;
+    margin-top: 20%;
   }
-  
+  .socialbtn{
+    margin: 15px;
+  }
 }
 @media(max-width: 425px){
   .mainLanding{
-    width: 100%;
-    height: 100vw;
-    overflow-x: hidden;
     display: flex;
     flex-direction: column-reverse;
-    
-  }
-  .bookinfo{
-    order: 2;
-    width: 100%;
-    height: 100vh;
-    display: block;
-    flex-direction: column;
-    margin-left: 15px;
-    padding-top: 30px;
-    
-  }
-  .coverPic{
-    background-size: auto;
-    background-repeat: no-repeat;
-    position: relative;
-    width: 160px;
-    height: 375px;
-    margin: 0 0 0 0px;
-    top: 5px;
-    left: 45px;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none;
-  }
-  .bookDesCont{
-    width: 286px;
-    margin: 0;
-    position: relative;
-    bottom: 70px;
-    left: 34px;
-  }
-  .bookDes{
-    font-size: 12px;
+    padding-bottom: 30vh;
   }
   .welcomeCont{
     display: none;
   }
-  .socialContainer{
-    order: 1;
-    width: 100%;
-    height: 100px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 120px;
+  .coverPic{
+    transform: none;
+    width: 54%;
+    height: 71%;
+    margin-left: 59px;
+    padding-left: 90px;
+    z-index: 1;
+  }
+  .bookDesCont{
+    width: 80%;
+    height: 80%;
+    margin: 0;
+    padding-left: 16%;
+  }
+  .welcomeCont{
+    width: 125%;
+    height: 36%;
+  }
+  .authCont{
+    width: 120%;
+    height: 35%;
+    margin-top: 190%;
+    margin-left: 53%;
   }
   .authbtn{
-    position: relative;
-    right: 135px;
-    bottom: 110px;
-  }
-  .socialbtn{
-    margin: 45px;
-    position: relative;
-    bottom: 90px;
-    left: 16px;
+    width: 43%;
+    height: 47%;
   }
   .social-box{
-    order: 2;
-    width: 400px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; 
-     
+    width: 227%;
+    margin-top: 30%;
+    margin-left: 25%
+  }
+  .socialbtn{
+    margin: 15px;
   }
 }
 @media(max-width: 375px){
+  .coverPic{
+    height: 65%;
+  }
+}
+@media(max-width: 325px){
+  .coverPic{
+    height: 58%;
+  }
+  .bookDesCont{
+    width: 80%;
+    height: 90%;
+    margin: 0;
+    padding-left: 16%;
+  }
+  .authCont{
+    width: 120%;
+    height: 35%;
+    margin-top: 240%;
+    margin-left: 53%;
+  }
+  .authbtn{
+    width: 43%;
+    height: 47%;
+  }
+  .social-box{
+    width: 227%;
+    margin-top: 30%;
+    margin-left: 8%
+  }
+  .socialbtn{
+    margin: 15px;
+  }
+}
+/* @media(max-width: 375px){
   .mainLanding{
     width: 100%;
     height: 100vw;
-    /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqS__RpIHeu4cg5BsdVXh1SkHEosGgciQaXenvLD8MFkW9Kxf-'); */
     background-size: cover;
     background-position: center;
     overflow-x: hidden;
@@ -549,7 +400,6 @@
     
   }
   .coverPic{
-    /* background: green; */
     background-size: auto;
     background-repeat: no-repeat;
     position: relative;
@@ -636,7 +486,6 @@
   .mainLanding{
     width: 100%;
     height: 100vw;
-    /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqS__RpIHeu4cg5BsdVXh1SkHEosGgciQaXenvLD8MFkW9Kxf-'); */
     background-size: cover;
     background-position: center;
     overflow-x: hidden;
@@ -655,7 +504,6 @@
     
   }
   .coverPic{
-    /* background: green; */
     background-size: auto;
     background-repeat: no-repeat;
     position: relative;
@@ -736,4 +584,4 @@
     margin: 5px;
     display: inline-block;
   }
-}
+} */

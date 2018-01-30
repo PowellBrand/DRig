@@ -67,14 +67,14 @@
   opacity: 0;
 }
 .menu{
-  width: 200px;
+  width: 0px;
   height: 250px;
   margin-top: 54px;
   background-image: url('https://www.phyramid.com/images/blog/making-phyramid-coms-procedurally-rendered-3d-header/header-background-indexed.png');
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
-  right: -200px;
+  right: 0px;
   top: 40px;
   overflow: hidden;
   transition: .5s;
@@ -88,7 +88,8 @@
   
 }
 .slide {
-  right: 0px;
+  width: 200px;
+  /* right: 0px; */
 }
 
 /* responsive header start */

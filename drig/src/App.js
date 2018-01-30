@@ -52,9 +52,9 @@ class App extends Component {
               <Link to='/contact'><p className="menubtn">Contact</p></Link>
             </div>
           </div>
-          {routes}
         </header>
-        
+        {routes}
+
       </div>
     );
   }

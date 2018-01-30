@@ -141,11 +141,11 @@ export default class Blog extends Component {
 
         return (
             <div className='mainBlogBod'>
-                {/* <div className='blogCont'> */}
+                
                     <div className='blogMesBox'>
                         {messages}
                     </div>
-                {/* </div> */}
+                
             </div>
         )
     }
