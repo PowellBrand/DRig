@@ -13,7 +13,7 @@ export default class Landing extends Component {
             <div className='mainLanding'>
                 <div className="socialContainer">
                     <div className='welcomeCont'>
-                        <h1 className='welcome'>Welcome to my site!</h1>
+                        <h1 className='welcome'>Welcome!</h1>
                         <p className='intro'>Check out my book to the right, or for more information click Books up above.</p><br/>
                         <p className='intro'>Follow me on facebook, twitter, youtube and instagram, or email me by clicking the Contact link</p><br/>
                         <p className='intro'>See what else I have to say on my blog page.</p>

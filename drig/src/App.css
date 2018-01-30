@@ -121,7 +121,7 @@
     margin-top: 34px;
   }
   body{
-    overflow: hidden;
+    /* overflow: hidden; */
   }
   .menu{
     display: inline;
@@ -149,7 +149,7 @@
     margin-top: 34px;
   }
   body{
-    overflow: hidden;
+    /* overflow: hidden; */
   }
   .menu{
     display: inline;

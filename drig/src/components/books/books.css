@@ -1,10 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Audiowide|Nixie+One");
 
 .mainBookCont{
-    background-image: url('./bookBG.jpg');
-    background-repeat: repeat;
-    background-size: cover; 
-    background-position: center;
+    background: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(94, 90, 90));
     width: 100%;
     height: auto;
     display: flex;
@@ -20,23 +17,49 @@
 .bookInfo{
     width: 100%;
     height: auto;
-    background: lightgray;
+    background: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(94, 90, 90));
     border-radius: 5px;
-    box-shadow: 10px 10px 30px rgb(75, 73, 73);
+    box-shadow: 20px 20px 50px rgb(75, 73, 73);
     padding: 15px;
     margin-bottom: 35px;
-    color: red;
+    color: black;
+    line-height: 1.5em;
     font-family: 'Nixie One', cursive;
 }
-
-.buyLinkBook{
-    height: 100px;
+@media(min-width: 1824px){
+    .worldCont{
+        width: 100%;
+        height: auto;
+        margin: 5px 115px;
+    }
+    .bookInfo{
+        font-size: 24px;
+    }
 }
-.buybtn{
-    width: 400px;
-    height: 50px;
-    font-size: 40px;
-    background: linear-gradient(to bottom right, gray,rgb(134, 21, 21));
-    position: relative;
-    left: 400px;
+@media(min-width: 1220px){
+    .worldCont{
+        width: 100%;
+        height: auto;
+        margin: 0px 0px;
+    }  
 }
+@media(max-width: 768px){
+    .worldCont{
+        width: 100%;
+        height: auto;
+        margin: 5px 115px;
+    } 
+}
+@media(max-width: 468px){
+    .bookInfo{
+        width: 93vw;
+        height: auto;
+        box-shadow: 0 10px 10px -2px rgb(75, 73, 73);
+        padding: 10px;
+        margin-bottom: 35px;
+        color: black;
+        line-height: 1.5em;
+        font-family: 'Nixie One', cursive;
+    }
+}
+    

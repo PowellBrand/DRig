@@ -1,43 +1,46 @@
 @import url("https://fonts.googleapis.com/css?family=Audiowide|Nixie+One");
-.mainBod{
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqS__RpIHeu4cg5BsdVXh1SkHEosGgciQaXenvLD8MFkW9Kxf-');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 100vh;
+.mainBlogBod{
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.733), rgb(94, 90, 90));
+    width: auto;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 0px, 500px;
+    padding-right: 150px;
+    padding-left: 50px;
   }
  
 .blogCont{
-    width: 80%;
+    /* width: 80%;
     height: auto;
     margin: 0px, 100px;
     font-family: 'Nixie One', cursive;
-    background: url('./blogBG.jpg');
-    background-position: center;
-    background-repeat: repeat-y;
     display: flex;
     justify-content: center;
     padding-right: 85px;
     overflow-x: hidden;
     
-    /* padding-left: 215px; */
+    padding-left: 215px; */
   }
   .blogMesBox{
-    width: 775px;
-    height: auto;
+    width: 80%;
     margin-left: 100px;
     padding-top: 15px;
     display: flex;
     flex-direction: column;
-    /* background: gray; */
   }
   .blogPost{
-    padding: 0 10px 0 10px;
+    padding: 0 13px 0 13px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(94, 90, 90));
+    border-radius: 5px;
+    box-shadow: 20px 20px 50px rgb(75, 73, 73);
+    padding: 15px;
+    margin-bottom: 35px;
+    color: black;
+    line-height: 1.5em;
+    font-family: 'Nixie One', cursive;
   }
   .blogTitle{
     font-size: 40px;
@@ -60,4 +63,23 @@
     display: flex;
     flex-direction: column;
   }
-  
+  @media(min-width: 1824px){
+    .blogPost{
+      font-size: 28px;
+    }
+  }
+  @media(max-width: 768px){
+    .mainBlogBod{
+      padding-right: 0px;
+      padding-left: 0px;
+    }
+    .blogMesBox{
+      height: auto;
+      margin-left: 100px;
+      padding-top: 15px;
+      position: relative;
+      right: 70px;
+      display: flex;
+      flex-direction: column;
+    }
+  }

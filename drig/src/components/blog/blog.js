@@ -110,6 +110,7 @@ export default class Blog extends Component {
 
         let messages = this.state.messages.map(message =>
             <div className='blogPost' key={message.id}>
+            <br />
                 <h1 className='blogTitle'>{message.title}</h1>
                 <h3 className='blogDate'>{message.date}</h3><br />
                 <h2 className='blogAuth'>{message.author}</h2><br />
@@ -139,12 +140,12 @@ export default class Blog extends Component {
         )
 
         return (
-            <div className='mainBod'>
-                <div className='blogCont'>
+            <div className='mainBlogBod'>
+                {/* <div className='blogCont'> */}
                     <div className='blogMesBox'>
                         {messages}
                     </div>
-                </div>
+                {/* </div> */}
             </div>
         )
     }

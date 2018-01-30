@@ -2,7 +2,6 @@ const nodemailer = require('nodemailer');
 
 module.exports = {
     sendEmail: (req, res) => {
-        // console.log(req.body);
         const output = `
             <p>You have a new email from your website</p>
             <p>${req.body.name}</p>

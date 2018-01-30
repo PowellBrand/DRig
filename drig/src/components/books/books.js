@@ -67,7 +67,7 @@ export default class Books extends Component {
     render() {
         let charBio = this.state.charBio.map(char =>
             <div className='bookInfo' key={char.id}>
-                <br />
+                
                 <p>Name: {char.name}</p>
                 <p>Full Name: {char.full_name}</p>
                 <p>Species: {char.species}</p>
@@ -95,7 +95,7 @@ export default class Books extends Component {
         )
         let worldInfo = this.state.worldInfo.map(world =>
             <div className='bookInfo' key={world.id}>
-                <br />
+                
                 <p>Name: {world.name}</p>
                 <p>Description: {world.description}</p>
                 {this.state.isAdmin ?
@@ -109,6 +109,7 @@ export default class Books extends Component {
             // for parallax, use mainBookCont as the outermost layer and bookInfo for the inner-most layer.
             <div className='mainBookCont'>
                 <div className="worldCont">
+                    <br/>
                     {charBio}
 
                     {worldInfo}
