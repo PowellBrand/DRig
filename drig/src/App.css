@@ -11,12 +11,13 @@
 /* End Main body */
 
 /* Header css */
-  .mainHead{
-    background-image: url('https://www.phyramid.com/images/blog/making-phyramid-coms-procedurally-rendered-3d-header/header-background-indexed.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 95px;
-  }
+.mainHead{
+  background-image: url('https://www.phyramid.com/images/blog/making-phyramid-coms-procedurally-rendered-3d-header/header-background-indexed.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 95px;
+}
+
 .mainNav{
   height: 95px;
   display: flex;

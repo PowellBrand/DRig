@@ -31,6 +31,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="mainHead">
+
           <nav className="mainNav">
             <div className="DR">David Rigtrup</div>
             <div className="navContainer">

@@ -22,13 +22,18 @@
   height: 3%;
   margin-left: 40px;
 }
-.authbtn{
+.logOut, .logIn{
+  /* width: 5%; */
   width: 42%;
   height: 100%;
   margin-left: 10px;
   border-radius: 3px;
   background-color: rgb(175, 22, 22);
+  float: right;
   box-shadow: 10px 10px 50px rgb(99, 98, 98);
+}
+.hide{
+  display: none;
 }
 .welcomeCont{
   width: 84%;
@@ -217,9 +222,9 @@
   .authCont{
     width: 50%;
     height: 3%;
-    margin-left: 18%;
+    margin-left: 5%;
   }
-  .authbtn{
+  .logOut, .logIn{
     width: 45%;
     height: 100%;
   }
@@ -256,6 +261,7 @@
   }
   .authCont{
     width: 50%;
+    margin-left: 11%;
   }
   .social-box{
     width: 91%;
@@ -289,7 +295,7 @@
     height: 36%;
   }
   .authCont{
-    width: 100%;
+    width: 64%;
   }
   .social-box{
     width: 119%;
@@ -331,9 +337,9 @@
     width: 120%;
     height: 35%;
     margin-top: 190%;
-    margin-left: 53%;
+    margin-left: 23%;
   }
-  .authbtn{
+  .logOut, .logIn{
     width: 43%;
     height: 47%;
   }
@@ -365,9 +371,9 @@
     width: 120%;
     height: 35%;
     margin-top: 240%;
-    margin-left: 53%;
+    margin-left: 19%;
   }
-  .authbtn{
+  .logOut, .logIn{
     width: 43%;
     height: 47%;
   }
