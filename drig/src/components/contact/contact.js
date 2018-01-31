@@ -43,15 +43,15 @@ export default class Contact extends Component {
                         <h3 className='email'>Email Me</h3><br/>
                         <form className='contForm' onSubmit={this.handleClick}>
                             <p>
-                                <label>Name</label>
+                                <label>Name:</label>
                                 <input className='contIn' type='text' ref="name" />
                             </p>
                             <p>
-                                <label>Email Address</label>
+                                <label>Email Address:</label>
                                 <input className='contIn' type="email" ref="email" />
                             </p>
                             <p>
-                                <label>Message</label>
+                                <label>Message:</label>
                                 <textarea className='contMes' ref="message" rows="7"></textarea>
                             </p>
                             <button type="submit">Submit</button>
