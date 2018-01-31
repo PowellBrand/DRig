@@ -91,6 +91,14 @@
   width: 200px;
   /* right: 0px; */
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 /* responsive header start */
 

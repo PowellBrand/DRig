@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Audiowide|Nixie+One");
-.mainBodAbout{
-    
+.mainBodAbout{ 
     background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.253), rgb(94, 90, 90));
     width: 100%;
     height: 87vh;
@@ -9,6 +8,8 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 30vh;
+    animation-name: fadeIn;
+    animation-duration: .6s;
 }
  
 .profilePicBox{
