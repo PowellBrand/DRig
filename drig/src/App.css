@@ -25,8 +25,6 @@
   justify-content: space-between;
   z-index: 50;
 }
-
-
 .navbtn{
   width: 100px;
   height: 50px;
@@ -41,9 +39,10 @@
   top: -15px;
   right: 25px;
 }
+
 .navbtn:hover{
-  color: rgba(43, 43, 230, 0.897);
-  transition: color .5s ease-out;
+  color: rgb(0, 0, 255);
+  transition: color .6s ease-out;
 }
 
 .DR{
