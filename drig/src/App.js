@@ -18,7 +18,7 @@ class App extends Component {
 
       slide: false
     }
-
+    this.clearMenu = this.clearMenu.bind(this)
     this.slide = this.slide.bind(this);
   }
   slide() {
@@ -26,10 +26,17 @@ class App extends Component {
       slide: !this.state.slide
     })
   }
+  clearMenu() {
+    if (this.state.slide) {
+      this.setState({
+        slide: !this.state.slide
+      })
+    }
+  }
 
   render() {
     return (
-      <div className="App">
+      <div className="App" onClick={this.clearMenu}>
         <header className="mainHead">
 
           <nav className="mainNav">

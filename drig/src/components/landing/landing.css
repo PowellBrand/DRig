@@ -35,7 +35,7 @@
   outline: none;
   box-shadow: 10px 10px 50px rgb(99, 98, 98);
 }
-.logOut:hover, .logIn:hover{
+.logOut, .logIn:hover{
   background: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(1, 4, 170));
 }
 .logOut:active, .logIn:active{
