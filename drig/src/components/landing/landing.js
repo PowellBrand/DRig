@@ -36,8 +36,8 @@ export default class Landing extends Component {
                     </div>
                     {/* auth buttons */}
                     <div className='authCont'>
-                        <a href="http://localhost:4000/auth/logout"><button onClick={this.auth} className={this.state.isAdmin ? 'logOut' : 'hide'}>Logout</button></a>
-                        <a href="http://localhost:4000/auth/login"><button onClick={this.auth} className={this.state.isAdmin ? 'hide' : 'logIn'}>Login</button></a>
+                        <a href={process.env.REACT_APP_LOGOUT}><button onClick={this.auth} className={this.state.isAdmin ? 'logOut' : 'hide'}>Logout</button></a>
+                        <a href={process.env.REACT_APP_LOGIN}><button onClick={this.auth} className={this.state.isAdmin ? 'hide' : 'logIn'}>Login</button></a>
 
 
                     </div>
