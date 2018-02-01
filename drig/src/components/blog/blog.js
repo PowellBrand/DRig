@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 // import EditBlog from './blogEdit';
 
@@ -120,7 +119,8 @@ export default class Blog extends Component {
                         <button className='editPostBtn' onClick={() => this.editPost(message.id)} >Edit</button>
                     </div>
                     : null}
-                {this.state.toEdit && this.state.messageid == message.id ?
+                    {/* === was == */}
+                {this.state.toEdit && this.state.messageid === message.id ?
                     <p>
                         <div className='postEdit'>
                             <label>Title:</label>

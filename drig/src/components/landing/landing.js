@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import coverPic from './coverPic.jpg';
 import axios from 'axios';
 
 
@@ -15,13 +13,13 @@ export default class Landing extends Component {
         // this.logOut = this.logOut.bind(this);
         // this.logIn = this.logIn.bind(this);
     }
-componentDidMount(){
-    axios.get('auth/me').then(({ data }) => {
-        this.setState({
-            isAdmin: data
+    componentDidMount() {
+        axios.get('auth/me').then(({ data }) => {
+            this.setState({
+                isAdmin: data
+            })
         })
-    })
-}
+    }
     auth() {
         this.setState({
             logOut: !this.state.logOut,
@@ -43,7 +41,7 @@ componentDidMount(){
                     <div className='authCont'>
                         <a href="http://localhost:4000/auth/logout"><button onClick={this.auth} className={this.state.isAdmin ? 'logOut' : 'hide'}>Logout</button></a>
                         <a href="http://localhost:4000/auth/login"><button onClick={this.auth} className={this.state.isAdmin ? 'hide' : 'logIn'}>Login</button></a>
-                        
+
 
                     </div>
                     <div className='social-box'>
@@ -56,8 +54,10 @@ componentDidMount(){
                 <div className="bookinfo">
                     <div className='coverPic'></div>
                     <div className='bookDesCont'>
-                        <p className='bookDes'>A sci-fantasy novel set in a dystopien city with a strong female protagonist surrounded by complex side characters.</p><br />
-                        <p className='bookDes'>Nocturnal is built on interesting dialogue, intense action, with a bit of philosphy tying everything together.</p><br />
+                        <div className='bookBox'>
+                            <p className='bookDes'>A sci-fantasy novel set in a dystopian city with a strong female protagonist surrounded by complex side characters.</p><br />
+                            <p className='bookDes'>Nocturnal is built on interesting dialogue, intense action, with a bit of philosphy tying everything together.</p><br />
+                        </div>
                         <a className='buyLinkLanding' href="https://www.amazon.com/Nocturnal-Spirits-1-David-Rigtrup/dp/1975807790/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr="><button className='buybtnLand'>BUY A COPY TODAY!</button></a><br />
                     </div>
 

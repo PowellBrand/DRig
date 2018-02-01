@@ -38,7 +38,7 @@ class App extends Component {
     return (
       <div className="App" onClick={this.clearMenu}>
         <header className="mainHead">
-
+          <div className='blankSpace'></div>
           <nav className="mainNav">
             <div className="DR">David Rigtrup</div>
             <div className="navContainer">

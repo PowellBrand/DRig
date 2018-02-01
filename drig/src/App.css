@@ -12,12 +12,14 @@
 
 /* Header css */
 .mainHead{
-  background-image: url('https://www.phyramid.com/images/blog/making-phyramid-coms-procedurally-rendered-3d-header/header-background-indexed.png');
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: linear-gradient(to right, rgb(61, 61, 61), rgb(20, 19, 19));
   height: 95px;
 }
 
+.blankSpace{
+  height: 43%;
+  background: linear-gradient(to right, rgb(255, 255, 255), rgb(163, 157, 157));
+}
 .mainNav{
   height: 95px;
   display: flex;
@@ -36,7 +38,7 @@
   color: #9e220c;
   text-align: center;
   position: relative;
-  top: -15px;
+  top: -59px;
   right: 25px;
 }
 
@@ -48,11 +50,11 @@
 .DR{
   font-family: 'Audiowide', cursive;
   color: #9e220c;
-  font-size: 50px;
+  font-size: 71px;
   margin-left: 10px;
   width: auto;
   position: relative;
-  top: 18px;
+  top: -19px;
 }
 
 .ham-menu{
@@ -103,22 +105,23 @@
 
 /* responsive header start */
 
-@media(max-width: 1000px){
+@media(max-width: 1024px){
+  
   .navbtn{
     width: 50px;
     height: 25px;
     margin: 0 15px 10px 10px;
     font-size: 20px;
-    top: -15px;
+    top: -54px;
   }
 }
-@media(max-width: 795px){
+@media(max-width: 768px){
   .navbtn{
    display: none;
   }
   .DR{
-    font-size: 40px;
-    top: 18px;
+    font-size: 70px;
+    top: -12px;
   }
   .mainNav{
     height: 95px;
@@ -128,7 +131,7 @@
   }
   .ham-menu{
     opacity: 1;
-    margin-top: 34px;
+    margin-top: 12px;
   }
   body{
     /* overflow: hidden; */
@@ -140,38 +143,14 @@
   }
 }
 
-@media(max-width: 768px){
-  .navbtn{
-   display: none;
-  }
-  .DR{
-    font-size: 40px;
-    top: 18px;
-  }
-  .mainNav{
-    height: 95px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .ham-menu{
-    opacity: 1;
-    margin-top: 34px;
-  }
-  body{
-    /* overflow: hidden; */
-  }
-  .menu{
-    display: inline;
-    overflow-x: hidden;
-    z-index: 5;
-  }
-}
 @media(max-width: 425px){
   
   .DR{
     font-size: 40px;
-    top: 33px;
+    top: 26px;
+  }
+  .blankSpace{
+    display: none;
   }
   .ham-menu{
     position: relative;
@@ -187,22 +166,18 @@
     right: 0px;
   }
 }
-@media(max-width: 400px){
-  .DR{
-    font-size: 33px;
-  }
-}
+
 @media(max-width: 375px){
   
   .DR{
     font-size: 33px;
-    top: 40px;
+    top: 30px;
   }
   .ham-menu{
     position: relative;
-    left: 20px;
+    left: 35px;
     opacity: 1;
-    margin-top: 44px; 
+    margin-top: 34px; 
   }
   .menu{
     right: -232px;
@@ -215,14 +190,15 @@
 @media(max-width: 320px){
   
   .DR{
-    font-size: 26px;
-    top: 46px;
+    font-size: 27px;
+    top: 36px;
+    width: 85%;
   }
   .ham-menu{
     position: relative;
-    left: 20px;
+    left: 34px;
     opacity: 1;
-    margin-top: 44px; 
+    margin-top: 33px; 
   }
   .menu{
     right: -232px;
