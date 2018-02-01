@@ -30,7 +30,8 @@ app.use(cors());
 
 massive(process.env.CONNECTIONSTRING).then(db => {
     app.set('db', db);
-})
+}).catch(console.error);
+
 //Set up session and passport.
 app.use(session({
     secret: process.env.SESSION_SECRET,
