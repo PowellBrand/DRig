@@ -56,7 +56,6 @@
 }
 .welcome{
   font-size: 200%;
-  /* color: white; */
   font-family: 'Nixie One', cursive;
   color: black;
   margin-bottom: 25px;
@@ -158,9 +157,7 @@
   height: 100vh;
   display: flex;
   flex-direction: row;
-  /* margin-left: 15px; */
   padding-top: 30px;
-  /* padding-left: 40px; */
   
 }
 .coverPic{
@@ -176,7 +173,6 @@
   margin-left: 26px;
   width: 40%;
   height: 68%
-  /* /* margin-left: 19px; */
 }
 .bookDesCont{
   width: 50%;

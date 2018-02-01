@@ -92,7 +92,6 @@
 }
 .slide {
   width: 200px;
-  /* right: 0px; */
 }
 @keyframes fadeIn {
   from {
@@ -133,9 +132,7 @@
     opacity: 1;
     margin-top: 12px;
   }
-  body{
-    /* overflow: hidden; */
-  }
+ 
   .menu{
     display: inline;
     overflow-x: hidden;

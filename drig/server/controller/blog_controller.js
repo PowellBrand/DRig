@@ -30,7 +30,6 @@ module.exports = {
         const {title, date, author, message} = req.body;
         const {params} = req;
         const db = req.app.get('db');
-        // console.log(req.body.title)
     db.editMes([title, date, author, message, params.id]).then((response)=>{
         db.getMessages().then((result)=> {
             res.status(200).send(result)
@@ -57,29 +56,3 @@ module.exports = {
     }
 
 }
-
-
-
-// getMessages: (req, res) => {
-//     const db = req.app.get('db');
-//     db.getMessages().then((result)=> {
-//         res.status(200).send(result[0])
-//     }).catch((e)=> {
-//         console.log(e)
-//         res.status(500).send()})
-// },
-
-
- //Get blog messages
-//  getMessages: (req, res) => {
-//     const db = req.app.get('db');
-//     db.getMessages().then((result)=> {
-//         res.status(200).send((result)=>{
-//             for(var i=0;i<result.length;i++){
-//                 return result[i]
-//             }
-//         })
-//     }).catch((e)=> {
-//         console.log(e)
-//         res.status(500).send()})
-// },

@@ -8,9 +8,11 @@ const express = require('express')
     , passport = require('passport')
     , Auth0Strategy = require('passport-auth0')
     , axos = require('axios');
+const path = require('path');
 
 
 const app = express();
+app.use(express.static(`${__dirname}/../build`));
 //Bring in the controllers
 const authController = require('./controller/auth_controller')
 const mailController = require('./controller/mail_controller')
@@ -51,7 +53,7 @@ passport.use(new Auth0Strategy({
 
     let { displayName, user_id, email } = profile
     db.find_user([user_id]).then((users) => {
-       //logged to console for testing//
+        //logged to console for testing//
         // console.log(users)
         ///////////////////////////////
         if (!users[0]) {
@@ -93,8 +95,8 @@ passport.deserializeUser((id, done) => {
 //Auth endpoints
 app.get('/auth/login', passport.authenticate('auth0'))
 app.get('/auth/callback', passport.authenticate('auth0', {
-    successRedirect: 'http://localhost:3000/#/',
-    failureRedirect: 'http://localhost:3000/#/'
+    successRedirect: process.env.REACT_APP_REDIRECT,
+    failureRedirect: process.env.REACT_APP_REDIRECT
 }))
 app.get('/auth/me', (req, res) => {
     if (!req.user) {
@@ -145,3 +147,7 @@ app.post('/contact/send', mailController.sendEmail)
 app.listen(process.env.SERVER_PORT, () => {
     console.log(`I'm listening on port: ${process.env.SERVER_PORT}.`)
 })
+
+app.get('*', (req, res)=>{
+    res.sendFile(path.join(__dirname, '../build/index.html'));
+});

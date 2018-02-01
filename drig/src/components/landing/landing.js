@@ -8,10 +8,7 @@ export default class Landing extends Component {
         this.state = {
             isAdmin: false,
             logOut: false
-        }
-
-        // this.logOut = this.logOut.bind(this);
-        // this.logIn = this.logIn.bind(this);
+        } 
     }
     componentDidMount() {
         axios.get('auth/me').then(({ data }) => {

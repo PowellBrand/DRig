@@ -104,7 +104,7 @@ export default class Books extends Component {
             </div>
         )
         return (
-            // for parallax, use mainBookCont as the outermost layer and bookInfo for the inner-most layer.
+        
             <div className='mainBookCont'>
                 <div className="worldCont">
                     <br/>
