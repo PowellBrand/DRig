@@ -22,6 +22,9 @@
   height: 3%;
   margin-left: 40px;
 }
+.logIn{
+  display: none;
+}
 .logOut, .logIn{
   /* width: 5%; */
   width: 50%;
