@@ -43,7 +43,7 @@ export default class Landing extends Component {
                     </div>
                     <div className='social-box'>
                         <a className='socialbtn' href="https://www.youtube.com/user/Davrilor"><div className='ytb'></div></a>
-                        <a className='socialbtn' href="https://twitter.com/davrilor"><div className='twttr'></div></a>
+                        <a className='socialbtn' href="https://twitter.com/DavidRigtrup"><div className='twttr'></div></a>
                         <a className='socialbtn' href="https://www.facebook.com/david.rigtrup.5"><div className='fcbk'></div></a>
                         <a className='socialbtn' href="https://www.instagram.com/david_rigtrup/"><div className='nstgrm'></div></a>
                     </div>
