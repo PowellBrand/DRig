@@ -22,9 +22,7 @@
   height: 3%;
   margin-left: 40px;
 }
-.logIn{
-  display: none;
-}
+
 .logOut, .logIn{
   /* width: 5%; */
   width: 50%;
@@ -32,6 +30,7 @@
   font-family: 'Audiowide', cursive;
   font-size: 75%;
   margin-left: 10px;
+  display: none;
   border-radius: 8px;
   background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.253), rgb(94, 90, 90));
   float: right;
@@ -409,8 +408,12 @@
 }
 @media(max-width: 325px){
   .coverPic{
-    height: 58%;
-    margin-left: 13%;
+    height: 69%;
+    width: 69%;
+    margin-left: 6%;
+  }
+  .bookBox{
+    width: 122%;
   }
   .bookDesCont{
     width: 80%;

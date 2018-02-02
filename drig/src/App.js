@@ -44,7 +44,7 @@ class App extends Component {
             <div className="navContainer">
               <Link to='/contact'><p className="navbtn">Contact</p></Link>
               <Link to='/blog'><p className="navbtn">Blog</p></Link>
-              <Link to='/books'><p className="navbtn">Books</p></Link>
+              <Link to='/books'><p className="navbtn">Nocturnal</p></Link>
               <Link to='/about'><p className="navbtn">About</p></Link>
               <Link to='/'><p className="navbtn">Home</p></Link>
             </div>
@@ -55,7 +55,7 @@ class App extends Component {
             <div className={this.state.slide ? 'menu slide' : 'menu'}>
               <Link to='/'><p className="menubtn">Home</p></Link>
               <Link to='/about'><p className="menubtn">About</p></Link>
-              <Link to='/books'><p className="menubtn">Books</p></Link>
+              <Link to='/books'><p className="menubtn">Nocturnal</p></Link>
               <Link to='/blog'><p className="menubtn">Blog</p></Link>
               <Link to='/contact'><p className="menubtn">Contact</p></Link>
             </div>

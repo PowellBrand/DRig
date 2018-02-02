@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Audiowide|Nixie+One");
+@import url("https://fonts.googleapis.com/css?family=Audiowide|Nixie+One|Rubik");
 
 /* Main body */
 .mainBod{
@@ -12,7 +12,7 @@
 
 /* Header css */
 .mainHead{
-  background: linear-gradient(to right, rgb(61, 61, 61), rgb(20, 19, 19));
+  background: linear-gradient(to right, rgb(20, 19, 19), rgb(61, 61, 61));
   height: 95px;
 }
 
@@ -28,13 +28,13 @@
   z-index: 50;
 }
 .navbtn{
-  width: 100px;
+  width: 120px;
   height: 50px;
   margin: 0px 0px 10px 10px;
   display: inline;
   float: right;
   font-size: 28px;
-  font-family: 'Nixie One', cursive;
+  font-family: 'Rubik', sans-serif;
   color: #9e220c;
   text-align: center;
   position: relative;
@@ -107,10 +107,10 @@
 @media(max-width: 1024px){
   
   .navbtn{
-    width: 50px;
+    width: 66px;
     height: 25px;
-    margin: 0 15px 10px 10px;
-    font-size: 20px;
+    margin: 0px 11px 0px 9px;
+    font-size: 18px;
     top: -54px;
   }
 }
