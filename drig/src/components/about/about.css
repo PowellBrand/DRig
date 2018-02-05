@@ -73,14 +73,14 @@
         order: 2; 
         background-size: cover;
         background-repeat: no-repeat;
-        margin-top: 100px;
+        margin-top: 6px;
         margin-left: 0;
         box-shadow: none;
     }
     .aboutParaBox{
         order: 1;
-        width: 100%;
-        height: auto;
+        width: 89%;
+        height: 70%;
         display: block;
         margin: 10px 30px;
     }
