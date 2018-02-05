@@ -72,7 +72,7 @@
   width: 0px;
   height: 250px;
   margin-top: 54px;
-  background-image: url('https://www.phyramid.com/images/blog/making-phyramid-coms-procedurally-rendered-3d-header/header-background-indexed.png');
+  background: linear-gradient(to right, rgb(20, 19, 19), rgb(61, 61, 61));
   background-size: cover;
   background-repeat: no-repeat;
   border-bottom-left-radius: 5px;
